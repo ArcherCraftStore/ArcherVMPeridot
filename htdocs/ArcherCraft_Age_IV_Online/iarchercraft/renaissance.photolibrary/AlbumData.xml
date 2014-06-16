@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+<key>Application Version</key>
+<string>9.3.2</string>
+<key>Archive Path</key>
+<string>/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/Renaissance.photolibrary</string>
+	<key>ArchiveId</key>
+	<string>1</string>
+<key>List of Albums</key>
+<array>
+<dict>
+<key>AlbumId</key>
+<integer>4</integer>
+<key>AlbumName</key>
+<string>Photos</string>
+<key>KeyList</key>
+<array>
+<string>1</string>
+</array>
+<key>Master</key>
+<true/>
+<key>GUID</key>
+<string>allPhotosAlbum</string>
+<key>PhotoCount</key>
+<integer>1</integer>
+<key>PlayMusic</key>
+<string>YES</string>
+<key>RepeatSlideShow</key>
+<string>YES</string>
+<key>SecondsPerSlide</key>
+<integer>3</integer>
+<key>SlideShowUseTitles</key>
+<false/>
+<key>SongPath</key>
+<string>/Applications/iPhoto.app/Contents/Resources/Music/Minuet in G.mp3</string>
+<key>TransitionDirection</key>
+<integer>0</integer>
+<key>TransitionName</key>
+<string>Default</string>
+<key>TransitionSpeed</key>
+<real>1.000000</real>
+<key>PanAndZoom</key>
+<string>YES</string>
+<key>Style</key>
+<string>Classic</string>
+<key>ShuffleSlides</key>
+<false/>
+</dict>
+<dict>
+<key>AlbumId</key>
+<integer>7</integer>
+<key>AlbumName</key>
+<string>Last 12 Months</string>
+<key>KeyList</key>
+<array>
+<string>1</string>
+</array>
+<key>Album Type</key>
+<string>Special Month</string>
+<key>GUID</key>
+<string>lastNMonthsAlbum</string>
+<key>Filter Mode</key>
+<string>Any</string>
+<key>Filters</key>
+<array>
+</array>
+<key>PhotoCount</key>
+<integer>1</integer>
+<key>PlayMusic</key>
+<string>YES</string>
+<key>RepeatSlideShow</key>
+<string>YES</string>
+<key>SecondsPerSlide</key>
+<integer>3</integer>
+<key>SlideShowUseTitles</key>
+<false/>
+<key>SongPath</key>
+<string>/Applications/iPhoto.app/Contents/Resources/Music/Minuet in G.mp3</string>
+<key>TransitionDirection</key>
+<integer>0</integer>
+<key>TransitionName</key>
+<string>Default</string>
+<key>TransitionSpeed</key>
+<real>1.000000</real>
+<key>PanAndZoom</key>
+<string>YES</string>
+<key>Style</key>
+<string>Classic</string>
+<key>ShuffleSlides</key>
+<false/>
+</dict>
+<dict>
+<key>AlbumId</key>
+<integer>8</integer>
+<key>AlbumName</key>
+<string>Last Import</string>
+<key>KeyList</key>
+<array>
+<string>1</string>
+</array>
+<key>Album Type</key>
+<string>Special Roll</string>
+<key>GUID</key>
+<string>lastImportAlbum</string>
+<key>PhotoCount</key>
+<integer>1</integer>
+<key>PlayMusic</key>
+<string>YES</string>
+<key>RepeatSlideShow</key>
+<string>YES</string>
+<key>SecondsPerSlide</key>
+<integer>3</integer>
+<key>SlideShowUseTitles</key>
+<false/>
+<key>SongPath</key>
+<string>/Applications/iPhoto.app/Contents/Resources/Music/Minuet in G.mp3</string>
+<key>TransitionDirection</key>
+<integer>0</integer>
+<key>TransitionName</key>
+<string>Default</string>
+<key>TransitionSpeed</key>
+<real>1.000000</real>
+<key>PanAndZoom</key>
+<string>YES</string>
+<key>Style</key>
+<string>Classic</string>
+<key>ShuffleSlides</key>
+<false/>
+</dict>
+<dict>
+<key>AlbumId</key>
+<integer>10</integer>
+<key>AlbumName</key>
+<string>Flagged</string>
+<key>KeyList</key>
+<array>
+</array>
+<key>Album Type</key>
+<string>Flagged</string>
+<key>GUID</key>
+<string>flaggedAlbum</string>
+<key>PhotoCount</key>
+<integer>0</integer>
+<key>PlayMusic</key>
+<string>YES</string>
+<key>RepeatSlideShow</key>
+<string>YES</string>
+<key>SecondsPerSlide</key>
+<integer>3</integer>
+<key>SlideShowUseTitles</key>
+<false/>
+<key>SongPath</key>
+<string>/Applications/iPhoto.app/Contents/Resources/Music/Minuet in G.mp3</string>
+<key>TransitionDirection</key>
+<integer>0</integer>
+<key>TransitionName</key>
+<string>Default</string>
+<key>TransitionSpeed</key>
+<real>1.000000</real>
+<key>PanAndZoom</key>
+<string>YES</string>
+<key>Style</key>
+<string>Classic</string>
+<key>ShuffleSlides</key>
+<false/>
+</dict>
+<dict>
+<key>AlbumId</key>
+<integer>14</integer>
+<key>AlbumName</key>
+<string>iArcherCraft</string>
+<key>KeyList</key>
+<array>
+<string>1</string>
+</array>
+<key>Album Type</key>
+<string>Regular</string>
+<key>GUID</key>
+<string>GkSUZalHQ9eokbCDmTvouA</string>
+<key>PhotoCount</key>
+<integer>1</integer>
+<key>PlayMusic</key>
+<string>YES</string>
+<key>RepeatSlideShow</key>
+<string>YES</string>
+<key>SecondsPerSlide</key>
+<integer>3</integer>
+<key>SlideShowUseTitles</key>
+<false/>
+<key>SongPath</key>
+<string>/Applications/iPhoto.app/Contents/Resources/Music/Minuet in G.mp3</string>
+<key>TransitionDirection</key>
+<integer>0</integer>
+<key>TransitionName</key>
+<string>Default</string>
+<key>TransitionSpeed</key>
+<real>1.000000</real>
+<key>PanAndZoom</key>
+<string>YES</string>
+<key>Style</key>
+<string>Classic</string>
+<key>ShuffleSlides</key>
+<false/>
+</dict>
+</array>
+<key>List of Rolls</key>
+<array>
+<dict>
+<key>RollID</key>
+<integer>6</integer>
+<key>RollName</key>
+<string>Jan 30, 2014</string>
+<key>RollDateAsTimerInterval</key>
+<real>412800047.000000</real>
+<key>KeyPhotoKey</key>
+<string>1</string>
+<key>KeyList</key>
+<array>
+<string>1</string>
+</array>
+<key>PhotoCount</key>
+<integer>1</integer>
+</dict>
+</array>
+<key>List of Faces</key>
+<dict>
+</dict>
+<key>List of Keywords</key>
+<dict>
+<key>6</key>
+<string>Birthday</string>
+<key>3</key>
+<string>Family</string>
+<key>2</key>
+<string>Favorite</string>
+<key>1</key>
+<string>✔</string>
+<key>4</key>
+<string>Kids</string>
+<key>5</key>
+<string>Vacation</string>
+</dict>
+<key>Major Version</key>
+<integer>2</integer>
+<key>Master Image List</key>
+<dict>
+<key>1</key>
+<dict>
+<key>MediaType</key>
+<string>Image</string>
+<key>Caption</key>
+<string>2252-004-44B0A7E8</string>
+<key>Comment</key>
+<string></string>
+<key>GUID</key>
+<string>nlUYTEPZQxeM27oB8kGLJQ</string>
+<key>PhotoStreamAssetId</key>
+<string></string>
+<key>Aspect Ratio</key>
+<real>0.653333</real>
+<key>Rating</key>
+<integer>0</integer>
+<key>Roll</key>
+<integer>6</integer>
+<key>DateAsTimerInterval</key>
+<real>412800047.000000</real>
+<key>DateAsTimerIntervalGMT</key>
+<real>412782047.000000</real>
+<key>ModDateAsTimerInterval</key>
+<real>412800047.000000</real>
+<key>MetaModDateAsTimerInterval</key>
+<real>412800205.402781</real>
+<key>ImagePath</key>
+<string>/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/Renaissance.photolibrary/Masters/2014/01/30/20140130-134324/2252-004-44B0A7E8.jpg</string>
+<key>ThumbPath</key>
+<string>/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/Renaissance.photolibrary/Thumbnails/2014/01/30/20140130-134324/nlUYTEPZQxeM27oB8kGLJQ/2252-004-44B0A7E8.jpg</string>
+<key>ImageType</key><string>JPEG</string>
+<key>Faces</key>
+<array>
+<dict><key>face key</key><string>1</string><key>rectangle</key><string>{{0.32142857, 0.75333333}, {0.22448978, 0.14666665}}</string><key>face index</key><integer>0</integer></dict>
+<dict><key>face key</key><string>2</string><key>rectangle</key><string>{{0.59183675, 0.60333335}, {0.14285713, 0.093333304}}</string><key>face index</key><integer>1</integer></dict>
+</array>
+</dict>
+</dict>
+<key>Minor Version</key>
+<integer>0</integer>
+</dict>
+</plist>

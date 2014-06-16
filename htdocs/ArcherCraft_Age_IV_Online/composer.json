@@ -1,0 +1,8 @@
+{
+    "require": {
+        "silex/silex":"1.0.x",
+        "twig/twig":">=1.8,<2.0-dev",
+        "workbandits/gamerocket-php":"1.1.2"
+    },
+    "minimum-stability":"dev"
+}

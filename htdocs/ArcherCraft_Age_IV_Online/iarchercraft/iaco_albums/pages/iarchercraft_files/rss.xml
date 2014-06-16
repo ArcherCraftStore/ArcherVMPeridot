@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:iphoto="urn:iphoto:property" xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>Evan’s World</title>
+    <link>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/iACO_Albums/Pages/iArcherCraft.html</link>
+    <description>Lorem ipsum dolor sit amet, ligula suspendisse nulla pretium, rhoncus tempor placerat fermentum, enim integer ad vestibulum volutpat. Nisl rhoncus turpis est, vel elit, congue wisi enim nunc ultricies sit, magna tincidunt. Maecenas aliquam maecenas ligula nostra, accumsan taciti.</description>
+    <item>
+      <title>2252-004-44B0A7E8</title>
+      <link>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/iACO_Albums/Pages/iArcherCraft.html#0</link>
+      <guid isPermaLink="false">dcd4f176-05b0-44e2-8cd8-2e61e76b405f</guid>
+      <enclosure url="file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/iACO_Albums/Pages/iArcherCraft_files/Media/2252-004-44B0A7E8/2252-004-44B0A7E8.jpg" length="11589" type="image/jpeg"/>
+      <iphoto:thumbnail>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/iACO_Albums/Pages/iArcherCraft_files/Media/2252-004-44B0A7E8/thumb.jpg</iphoto:thumbnail>
+      <iweb:micro>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/iACO_Albums/Pages/iArcherCraft_files/Media/2252-004-44B0A7E8/micro.jpg</iweb:micro>
+      <iweb:mip-thumbnail>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/iACO_Albums/Pages/iArcherCraft_files/Media/2252-004-44B0A7E8/mip.jpg</iweb:mip-thumbnail>
+      <iweb:richTitle>&lt;div style=&quot;padding: 0px; &quot; class=&quot;image_cluster_layout_style_default_External_182_35&quot;&gt;&lt;div class=&quot;image_cluster_layout_style_default&quot;&gt;&lt;p style=&quot;padding-bottom: 0pt; padding-top: 0pt; &quot; class=&quot;Caption&quot;&gt;2252-004-44B0A7E8&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</iweb:richTitle>
+    </item>
+  </channel>
+</rss>

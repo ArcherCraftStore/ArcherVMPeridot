@@ -1,0 +1,69 @@
+.mstheme-label {
+	color: #4864A7;
+}
+a:active {
+	color: #E99B18;
+}
+a:link {
+	color: #CE3345;
+}
+a:visited {
+	color: #A43ACE;
+}
+body {
+	background-color: #FFFFFF;
+	color: #4864A7;
+}
+caption {
+	color: #4864A7;
+}
+fieldset {
+	border-color: #727272;
+	color: #4864A7;
+}
+h1 {
+	color: #4864A7;
+}
+h2 {
+	color: #4864A7;
+}
+h3 {
+	color: #4864A7;
+}
+h4 {
+	color: #4864A7;
+}
+h5 {
+	color: #4864A7;
+}
+h6 {
+	color: #4864A7;
+}
+hr {
+	color: #727272;
+}
+label {
+	color: #4864A7;
+}
+legend {
+	color: #4864A7;
+}
+marquee {
+	color: #4864A7;
+}
+select {
+	border-color: #E9E9E9;
+	color: #000000;
+}
+TABLE {
+	border-color: #000000;
+	color: #000000;
+	table-border-color-dark: #000000;
+	table-border-color-light: #585858;
+}
+td {
+	border-color: #727272;
+}
+th {
+	color: #4864A7;
+}

@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Seal Code Required"
+AuthUserFile E:/xampp/htdocs/Ninja_Cert/Session_1/.htpasswd
+Require valid-user
+DirectoryIndex q1.html

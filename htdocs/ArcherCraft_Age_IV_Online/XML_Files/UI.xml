@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="News Flash!" /> 
+  <Content type="html">
+     <![CDATA[ 
+       You Now Can View News On ArcherCraft On this page!
+     ]]>
+  </Content> 
+</Module>

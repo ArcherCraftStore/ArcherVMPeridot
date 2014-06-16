@@ -1,0 +1,128 @@
+table#shelf1{
+
+border: 2px solid black;
+
+display:  table;
+
+}
+td#ClassicArcherCraftTheme{
+
+font-family:
+ Segoe UI, Comic Sans MS;
+
+}
+td.storeitem:before
+{
+ counter-increment: section;
+ content:  counter(section)": ";
+}
+
+td.storeitem{
+
+border: 2px solid black;
+
+background-color:red;
+
+
+}
+td.storeitem:hover{
+ 
+ -webkit-animation: hoveritem 10s;
+
+}
+div.ItemName{
+  font-family: Segoe UI;
+
+}
+
+
+div#header
+{
+  font-family: Segoe UI;
+ 
+ background-color: red;
+
+border:2px solid;
+
+border-radius:25px
+;
+}
+
+ul.navbar
+{
+list-style-type:none;
+
+margin:0;
+padding:0;
+
+}
+li.NavItems
+{
+display:inline;
+
+}
+a.NavItems:link,a.NavItems:visited
+{
+display:block;
+
+width:120px;
+
+font-weight:bold;
+color:#FFFFFF;
+background-color:#98bf21;
+text-align:center;
+padding:4px;
+text-decoration:none;
+text-transform:uppercase;
+}
+div.link{
+background-color: blue;
+border: 3px solid silver;
+}
+div.price{
+width: 138px;
+height: 26px;
+border: 2px solid black;
+}
+div.link:hover{
+background-color: green;
+}
+th.header{
+font-family: Segoe UI;
+background-color: green;
+color: red;
+}
+th.header:hover{
+font-family: Comic Sans MS;
+background-color: red;
+color: green;
+}
+button.purchasebtn{
+font-family: Segoe UI;
+}
+@-webkit-keyframes hoveritem
+{
+  from {background: red;}
+  to {background: green;}
+  }
+}
+div.actions{
+	  font-family: Segoe UI;
+  background-color: red;
+border:2px solid;
+border-radius:25px;
+	}
+body.store{
+background-color: tan;
+}
+td{
+background-color:red
+}
+button.purchasebtn:before{
+content: "Get Chrome Theme";
+}
+div.photo img{
+  width:  200px;
+  height: 100px;
+}
+}

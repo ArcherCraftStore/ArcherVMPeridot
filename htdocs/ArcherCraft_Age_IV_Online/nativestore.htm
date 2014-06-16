@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+
+
+<html>
+ 
+
+ <head>
+
+ 
+<title>ACO Web/Native Store</title>
+
+<link type="text/css" rel="stylesheet" href="_styles/css/storestyle.css"/>
+ 
+<script src="SpryAssets/SpryValidationCheckbox.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://www.dropbox.com/static/api/1/dropins.js" id="dropboxjs" data-app-key="4c4ba8kbf84hend"></script>
+
+<script type="text/javascript">
+  function OpenProfile(){
+    var money= 1000;
+  }
+  
+  
+
+  
+
+ 
+</script>
+<script src="http://www.parsecdn.com/js/parse-1.1.15.min.js">
+</script>
+      <script type="text/javascript" src="Scripts/js/internal.js"></script>
+        
+<script type="text/javascript" src="Scripts/js/archercraft_parse_app.js">
+</script>
+
+<script type="text/javascript">
+
+function Submit(){
+	
+if(document.forms.mail===true
+	){
+
+		window.location.assign("mailito:weldon23.henson23@gmail.com");
+	
+}
+	
+
+}
+
+</script>
+
+<link href="SpryAssets/SpryValidationCheckbox.css" rel="stylesheet" type="text/css">
+
+<link href="SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css">
+
+</head>
+   
+
+<body class="store" onload="OpenProfile();">
+   <div id="header"><header><h1>ArcherCraft Store</h1></header><div class="navbox"><ul class="navbar"><li class="NavItems">
+<a class="NavItems" href="index.htm">Home</a>
+</li>
+</ul>
+</div>
+</div>
+ 
+ <div class="actions">
+    <form name="form1" method="post" action="" >
+<span id="sprycheckbox1">
+        <input type="checkbox" name="mail" id="mail">
+        <label for="mail">Contact Developer</label>
+        <span class="checkboxRequiredMsg">Please make a selection.</span></span>
+       <div id="CollapsiblePanel1" class="CollapsiblePanel">
+         <div class="CollapsiblePanelTab" tabindex="0">Buttons</div>
+         <div class="CollapsiblePanelContent">       <input type="submit" label="go!" onSubmit="Submit">
+</div>
+       </div>
+    </form>
+  </div>
+<table id="shelf1">
+   
+ <thead>
+<tr><th class="header"><div class="StoreTitle"><h1>ArcherCraft Store</h1></div><div class="ItemTitle"><h4>Chrome Themes</h4></div></th><th class="header"><div class="StoreTitle"><h1>ArcherCraft Store</h1></div><div class="ItemTitle"><h4>Facebook Themes</h4></div></th></tr>
+</thead>
+  
+    <tbody>
+<tr>
+<td id="ClassicArcherCraftTheme" class="storeitem">
+<div class="ItemName">
+<h3>Classic ArcherCraft</h3>
+</div><div class="photo">
+<img src="_static/media/img/preview.jpeg">
+</div><div class="price">FREE</div>
+
+<div class="link">
+<button class="purchasebtn" onclick="
+  window.location.assign('https://www.mychrometheme.com/t/1fb37bs4lw1zrz59ayytr8n4z');
+ ">Get Chrome Theme</button>
+
+</div>
+</td>
+<td class="StoreItem">
+  
+</td>
+</tr>
+<tr>
+<td class="storeitem">
+<div class="ItemName">
+<h3>EpicArcherCraft</h3>
+</div>
+<div class="photo">
+<img src="_static/media/img/preview (1).jpeg">
+</div>
+<div class="price">FREE</div>
+<div class="link">
+<button class="purchasebtn" onclick="window.location.assign('https://www.mychrometheme.com/t/3hh14819smsyucpsycgah1j3z');">Get Chrome Theme</button>
+</div>
+</td>
+<td class="storeitem">
+<div class="ItemName"><h3>Dropbox Random Item</h3></div>
+<div class="photo"><img src="_static/media/img/dropboxrand.png">
+<script type="text/javascript" src="https://www.dropbox.com/static/api/1/dropins.js" id="dropboxjs" data-app-key="4c4ba8kbf84hend"></script>
+</div>
+<div class="link">
+<form>
+<input type="dropbox-chooser" name="selected-file" id="db-chooser"/>
+<script type="text/javascript">
+    // add an event listener to a Chooser button
+    document.getElementById("db-chooser").addEventListener("DbxChooserSuccess",
+        function(e) {
+            alert("Here's the chosen file: " + e.files[0].link);
+            window.location.assign(e.files[0].link);
+        }, false);
+</script>
+</form>
+</div>
+</td>
+<td class="StoreItem">
+<div class="image"><img src="_static/media/img/preview (2).png"</div>
+  <div class="link">
+    <a href="https://www.mychrometheme.com/t/9p58chpiyqz6nsu8321kpnjpf">Apache Chic</a>
+  </div>
+</td>
+</tr>
+</tbody>
+
+</table>
+
+<script type="text/javascript">
+
+var sprycheckbox1 = new Spry.Widget.ValidationCheckbox("sprycheckbox1");
+
+var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
+
+</script>
+
+</body>
+
+</html>

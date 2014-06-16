@@ -1,0 +1,11 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+ <display-name>ArcherCraft Age IV EX Online</display-name>
+
+
+ <welcome-file>index.jsp</welcome-file>
+ <welcome-file>index.htm</welcome-file>
+ <welcome-file>index.php</welcome-file>
+ <welcome-file>index.html</welcome-file>
+ <welcome-file>index.cfm</welcome-file>
+
+    </web-app>

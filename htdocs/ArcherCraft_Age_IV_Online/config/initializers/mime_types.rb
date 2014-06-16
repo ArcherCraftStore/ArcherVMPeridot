@@ -1,0 +1,1 @@
+Rack::Mime::MIME_TYPES['.webapp'] = 'application/x-web-app-manifest+json'

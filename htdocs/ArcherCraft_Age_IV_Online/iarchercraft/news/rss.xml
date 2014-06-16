@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>My Travels</title>
+    <link>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/News/News.html</link>
+    <description>\</description>
+    <generator>iWeb 3.0.4</generator>
+    <image>
+      <url>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/News/News_files/rbds_77B.jpg</url>
+      <title>My Travels</title>
+      <link>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/News/News.html</link>
+    </image>
+    <item>
+      <title>The First Challenge</title>
+      <link>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/News/Entries/2014/1/30_Reflections_on_the_lake.html</link>
+      <guid isPermaLink="false">43655bca-add4-4394-9254-dfabd2784131</guid>
+      <pubDate>Thu, 30 Jan 2014 13:34:24 -0500</pubDate>
+      <description>Task: Defeat the enemy sentry to enter the museum</description>
+    </item>
+  </channel>
+</rss>

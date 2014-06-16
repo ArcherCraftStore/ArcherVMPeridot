@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html manifest="manifest.appcache">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.g-page').dblclick(function(){
+ $('.g-page').fadeOut('fast');
+});
+});
+</script>
+</head>
+<body>
+  <div data-role="page" id="#pageone" >
+    <div data-role="header" data-theme="b" CLASS="ui-corner-all"><a href="info.php">Info</a><h1>ArcherCraft</h1></div>
+    <div data-role="navbar"><a href="info.htm">News</a></div>
+      <div data-role="main" class="ui-content"> <h2>ACO Media Library</h2>
+    
+    <form class="ui-filterable">
+      <input id="ACOFilter" data-type="search">
+    </form>
+    <ul data-role="listview" data-filter="true" data-input="#ACOFilter" data-autodividers="true" data-inset="true">
+      <li><a href="_static/media/pdf/chapter16.pdf">Chapter 16: Absolutism</a></li>
+      <li><a href="_static/media/pdf/chapter10.pdf">Chapter 10:Sui and Tang </a></li>
+      <li><a href="_static/media/pdf/chapter11.pdf">Chapter 11: Mesoamerica</a></li>
+    
+    </ul>
+  </div></div>
+  <div data-role="page" id="ACOConnect" data-theme="b">
+  
+  <div data-role="header">
+  <h1>Share</h1>
+  </div>
+  <div data-role="main" class="ui-content">
+    <!-- Place this tag where you want the widget to render. -->
+<div class="g-page" data-href="//plus.google.com/u/0/107221287904114524007" data-rel="publisher"></div>
+
+<!-- Place this tag after the last widget tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+  </div>
+  </div>
+</body>

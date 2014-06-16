@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>News</title>
+    <link>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/News</link>
+    <description>\</description>
+    <item>
+      <title>The First Challenge</title>
+      <link>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/News/Entries/2014/1/30_Reflections_on_the_lake.html</link>
+      <guid isPermaLink="false">43655bca-add4-4394-9254-dfabd2784131</guid>
+      <pubDate>Thu, 30 Jan 2014 13:34:24 -0500</pubDate>
+      <description>Task: Defeat the enemy sentry to enter the museum</description>
+      <iweb:comment enabled="0" count="0" link="file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/News/Entries/2014/1/30_Reflections_on_the_lake.html#comment_layer"></iweb:comment>
+    </item>
+    <iweb:dateFormat>EEEE, MMMM d, y</iweb:dateFormat>
+    <iweb:baseURL>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/News</iweb:baseURL>
+    <iweb:maximumSummaryItems>5</iweb:maximumSummaryItems>
+  </channel>
+</rss>

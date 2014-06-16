@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+<key>Application Version</key>
+<string>9.3.2</string>
+<key>Archive Path</key>
+<string>/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/Renaissance.photolibrary</string>
+	<key>ArchiveId</key>
+	<string>1</string>
+	<key>Movie Serial Number</key>
+	<string>0</string>
+<key>List of Albums</key>
+<array>
+<dict>
+<key>AlbumId</key>
+<integer>4</integer>
+<key>AlbumName</key>
+<string>Photos</string>
+<key>KeyListString</key>
+<string>1</string>
+<key>Master</key>
+<true/>
+<key>GUID</key>
+<string>allPhotosAlbum</string>
+<key>PhotoCount</key>
+<integer>1</integer>
+<key>PlayMusic</key>
+<string>YES</string>
+<key>RepeatSlideShow</key>
+<string>YES</string>
+<key>SecondsPerSlide</key>
+<integer>3</integer>
+<key>SlideShowUseTitles</key>
+<false/>
+<key>SongPath</key>
+<string>/Applications/iPhoto.app/Contents/Resources/Music/Minuet in G.mp3</string>
+<key>TransitionDirection</key>
+<integer>0</integer>
+<key>TransitionName</key>
+<string>Default</string>
+<key>TransitionSpeed</key>
+<real>1.000000</real>
+<key>PanAndZoom</key>
+<string>YES</string>
+<key>Style</key>
+<string>Classic</string>
+<key>ShuffleSlides</key>
+<false/>
+</dict>
+<dict>
+<key>AlbumId</key>
+<integer>7</integer>
+<key>AlbumName</key>
+<string>Last 12 Months</string>
+<key>KeyListString</key>
+<string>1</string>
+<key>Album Type</key>
+<string>Special Month</string>
+<key>GUID</key>
+<string>lastNMonthsAlbum</string>
+<key>Filter Mode</key>
+<string>Any</string>
+<key>Filters</key>
+<array>
+</array>
+<key>PhotoCount</key>
+<integer>1</integer>
+<key>PlayMusic</key>
+<string>YES</string>
+<key>RepeatSlideShow</key>
+<string>YES</string>
+<key>SecondsPerSlide</key>
+<integer>3</integer>
+<key>SlideShowUseTitles</key>
+<false/>
+<key>SongPath</key>
+<string>/Applications/iPhoto.app/Contents/Resources/Music/Minuet in G.mp3</string>
+<key>TransitionDirection</key>
+<integer>0</integer>
+<key>TransitionName</key>
+<string>Default</string>
+<key>TransitionSpeed</key>
+<real>1.000000</real>
+<key>PanAndZoom</key>
+<string>YES</string>
+<key>Style</key>
+<string>Classic</string>
+<key>ShuffleSlides</key>
+<false/>
+</dict>
+<dict>
+<key>AlbumId</key>
+<integer>8</integer>
+<key>AlbumName</key>
+<string>Last Import</string>
+<key>KeyListString</key>
+<string>1</string>
+<key>Album Type</key>
+<string>Special Roll</string>
+<key>GUID</key>
+<string>lastImportAlbum</string>
+<key>PhotoCount</key>
+<integer>1</integer>
+<key>PlayMusic</key>
+<string>YES</string>
+<key>RepeatSlideShow</key>
+<string>YES</string>
+<key>SecondsPerSlide</key>
+<integer>3</integer>
+<key>SlideShowUseTitles</key>
+<false/>
+<key>SongPath</key>
+<string>/Applications/iPhoto.app/Contents/Resources/Music/Minuet in G.mp3</string>
+<key>TransitionDirection</key>
+<integer>0</integer>
+<key>TransitionName</key>
+<string>Default</string>
+<key>TransitionSpeed</key>
+<real>1.000000</real>
+<key>PanAndZoom</key>
+<string>YES</string>
+<key>Style</key>
+<string>Classic</string>
+<key>ShuffleSlides</key>
+<false/>
+</dict>
+<dict>
+<key>AlbumId</key>
+<integer>10</integer>
+<key>AlbumName</key>
+<string>Flagged</string>
+<key>KeyListString</key>
+<string></string>
+<key>Album Type</key>
+<string>Flagged</string>
+<key>GUID</key>
+<string>flaggedAlbum</string>
+<key>PhotoCount</key>
+<integer>0</integer>
+<key>PlayMusic</key>
+<string>YES</string>
+<key>RepeatSlideShow</key>
+<string>YES</string>
+<key>SecondsPerSlide</key>
+<integer>3</integer>
+<key>SlideShowUseTitles</key>
+<false/>
+<key>SongPath</key>
+<string>/Applications/iPhoto.app/Contents/Resources/Music/Minuet in G.mp3</string>
+<key>TransitionDirection</key>
+<integer>0</integer>
+<key>TransitionName</key>
+<string>Default</string>
+<key>TransitionSpeed</key>
+<real>1.000000</real>
+<key>PanAndZoom</key>
+<string>YES</string>
+<key>Style</key>
+<string>Classic</string>
+<key>ShuffleSlides</key>
+<false/>
+</dict>
+<dict>
+<key>AlbumId</key>
+<integer>18</integer>
+<key>AlbumName</key>
+<string>Trash</string>
+<key>KeyListString</key>
+<string></string>
+<key>Album Type</key>
+<string>Trash</string>
+<key>GUID</key>
+<string>trashAlbum</string>
+<key>PhotoCount</key>
+<integer>0</integer>
+<key>PlayMusic</key>
+<string>YES</string>
+<key>RepeatSlideShow</key>
+<string>YES</string>
+<key>SecondsPerSlide</key>
+<integer>3</integer>
+<key>SlideShowUseTitles</key>
+<false/>
+<key>SongPath</key>
+<string>/Applications/iPhoto.app/Contents/Resources/Music/Minuet in G.mp3</string>
+<key>TransitionDirection</key>
+<integer>0</integer>
+<key>TransitionName</key>
+<string>Default</string>
+<key>TransitionSpeed</key>
+<real>1.000000</real>
+<key>PanAndZoom</key>
+<string>YES</string>
+<key>Style</key>
+<string>Classic</string>
+<key>ShuffleSlides</key>
+<false/>
+</dict>
+<dict>
+<key>AlbumId</key>
+<integer>14</integer>
+<key>AlbumName</key>
+<string>iArcherCraft</string>
+<key>KeyListString</key>
+<string>1</string>
+<key>Album Type</key>
+<string>Regular</string>
+<key>GUID</key>
+<string>GkSUZalHQ9eokbCDmTvouA</string>
+<key>PhotoCount</key>
+<integer>1</integer>
+<key>PlayMusic</key>
+<string>YES</string>
+<key>RepeatSlideShow</key>
+<string>YES</string>
+<key>SecondsPerSlide</key>
+<integer>3</integer>
+<key>SlideShowUseTitles</key>
+<false/>
+<key>SongPath</key>
+<string>/Applications/iPhoto.app/Contents/Resources/Music/Minuet in G.mp3</string>
+<key>TransitionDirection</key>
+<integer>0</integer>
+<key>TransitionName</key>
+<string>Default</string>
+<key>TransitionSpeed</key>
+<real>1.000000</real>
+<key>PanAndZoom</key>
+<string>YES</string>
+<key>Style</key>
+<string>Classic</string>
+<key>ShuffleSlides</key>
+<false/>
+</dict>
+</array>
+<key>List of Rolls</key>
+<array>
+<dict>
+<key>RollID</key>
+<integer>6</integer>
+<key>RollName</key>
+<string>Jan 30, 2014</string>
+<key>RollDateAsTimerInterval</key>
+<real>412800047.000000</real>
+<key>KeyPhotoKey</key>
+<string>1</string>
+<key>KeyListString</key>
+<string>1</string>
+<key>PhotoCount</key>
+<integer>1</integer>
+</dict>
+</array>
+<key>List of Keywords</key>
+<dict>
+<key>6</key>
+<string>Birthday</string>
+<key>3</key>
+<string>Family</string>
+<key>2</key>
+<string>Favorite</string>
+<key>1</key>
+<string>✔</string>
+<key>4</key>
+<string>Kids</string>
+<key>5</key>
+<string>Vacation</string>
+</dict>
+<key>Movie Photo Keys</key>
+<string></string>
+<key>Hidden Photo Keys</key>
+<string></string>
+</dict>
+</plist>

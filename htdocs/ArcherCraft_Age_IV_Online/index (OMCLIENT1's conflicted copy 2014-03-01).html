@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html manifest="manifest.appcache">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+</head>
+<body>
+  <div data-role="page" id="#pageone" >
+    <div data-role="header" data-theme="a" CLASS="ui-corner-all"><a href="info.php">Info</a><h1>ArcherCraft</h1></div>
+    <div data-role="navbar"><a href="info.htm">News</a></div>
+      <div data-role="main" class="ui-content"> <h2>ACO Media Library</h2>
+    
+    <form class="ui-filterable">
+      <input id="ACOFilter" data-type="search">
+    </form>
+    <ul data-role="listview" data-filter="true" data-input="#ACOFilter" data-autodividers="true" data-inset="true">
+      <li><a href="_static/media/pdf/chapter16.pdf">Chapter 16: Absolutism</a></li>
+      <li><a href="_static/media/pdf/chapter10.pdf">Chapter 10:Sui and Tang </a></li>
+      <li><a href="_static/media/pdf/chapter11.pdf">Chapter 11: Mesoamerica</a></li>
+      <li><a href="#Hispanic">Chapter 11: Mesoamerica</a></li>
+    
+    </ul>
+  </div></div>
+    </div>
+    <div data-role="page" id="Hispanic">
+      <div data-role="header">
+        <h1>Famous Hispanic</h1>
+      </div>
+      <div data-role="content">
+        <img src="_static/media/img/frida.png">
+        <div data-role="collapsible">
+        <h1>Info</h1>
+        born July 6, 1907<br>
+           Mexican painter noted for her intense, brilliantly coloured self-portraits painted in a primitivistic style
+        </div>
+        
+      </div></div>
+    </div>
+</body>

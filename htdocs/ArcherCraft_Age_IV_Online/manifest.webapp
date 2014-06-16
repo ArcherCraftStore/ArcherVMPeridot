@@ -1,0 +1,15 @@
+{ 
+ "name": "ArcherCraft Age V Online",
+  "description": "The REAL game of Thrones in the Renaissance",
+ "launch_path": "/index.php",
+  "icons": {
+    "128": "_static/media/img/icon-128.png",
+  },
+     "developer" :{
+         "name": "Weldon Henson, ArcherCraft Studios"
+          "url": "http://www.archercraftlife.webs.com"
+         },
+       "default_locale":  "en",
+       "appcache_path": "/manifest.appcache"
+}
+

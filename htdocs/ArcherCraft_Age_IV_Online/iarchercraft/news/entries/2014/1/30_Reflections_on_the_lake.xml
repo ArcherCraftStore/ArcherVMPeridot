@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<content collectionGUID="9CC42EB3-F7ED-4F52-822F-08E28297D433">
+  <lastEdited clientType="local-build-20140130" date="2014-01-30 18:46:40 +0000"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>Evan&#x2019;s World</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>The First Challenge</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>Thursday, January 30, 2014</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>Task: Defeat the enemy sentry to enter the museum</richText>
+  </textBox>
+</content>

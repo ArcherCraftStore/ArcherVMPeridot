@@ -1,0 +1,33 @@
+body {
+   
+ font-family: Segoe UI;
+    
+background-color: chocolate;
+
+}
+
+h1.title{
+    
+color: white;
+
+text-align: center;
+}
+div.header{
+background-color: green;
+}
+a.loginbutton{
+background-color: #15E2C1;
+color: azure;
+font-size: medium;
+font-weight: bolder;
+text-decoration: none;
+border-radius: 4px;
+float: left;
+width: 50px;
+height: 25px;
+}
+div.center{
+    float: right;
+    background-color: cyan;
+    border-radius: 2px;   
+}

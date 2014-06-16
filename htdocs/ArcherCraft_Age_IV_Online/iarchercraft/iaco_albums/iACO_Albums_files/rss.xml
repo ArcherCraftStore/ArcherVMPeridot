@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:iphoto="urn:iphoto:property" xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>iArcherCraft Albums</title>
+    <link>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/iACO_Albums/iACO_Albums.html</link>
+    <description>View Albums Here</description>
+    <item>
+      <title>iArcherCraft</title>
+      <link>file://localhost/Users/Student/Documents/ArcherCraft_Age_IV_Online/iArcherCraft/iACO_Albums/Pages/iArcherCraft.html</link>
+      <guid isPermaLink="false">c3f6b42a-9c8b-4989-bdff-75825ed4cc9d</guid>
+    </item>
+  </channel>
+</rss>

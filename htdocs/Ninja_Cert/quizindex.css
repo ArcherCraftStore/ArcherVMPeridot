@@ -1,0 +1,66 @@
+button{
+    outline: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #ecf2f4;
+    color: #bbc0c2;
+    border: none;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    width: 100%;
+    padding: 20px 25px;
+    font-size: 16px;
+    margin: 0 0 15px;
+    font-family: droid sans;
+    border-radius: 5px;
+}
+.nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding-bottom: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 14px;
+  text-transform: uppercase;
+}
+
+.jumbotron {
+  background-image: url('http://t0.gstatic.com/images?q=tbn:ANd9GcTY1mqXLaDGVxVXxzzxqyCsHLJ8x3xZd3QOdBdYFFkQ2ro1OJEbaw:thumbs.dreamstime.com/z/beaker-blue-liquid-17960908.jpg');
+  height: 500px;
+  background-repeat: no-repeat;
+      background-size: cover;
+         background-position: center center;
+         background-repeat: no-repeat;
+         
+}
+
+.jumbotron h1 {
+  color: #001F55;
+  font-size: 48px;
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
