@@ -1,0 +1,26 @@
+To: weldon23.henson23@gmail.com
+Subject: New WordPress Site
+Date: Wed, 4 Jun 2014 15:40:21 +0000
+Return-Path: <wordpress@>
+From: WordPress <wordpress@>
+Message-ID: <78e1f2bc7d8c68c6339ea7061f966281@localhost.localdomain>
+X-Priority: 3
+X-Mailer: PHPMailer 5.2.7 (https://github.com/PHPMailer/PHPMailer/)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Your new WordPress site has been successfully set up at:
+
+http:
+
+You can log in to the administrator account with the following information:
+
+Username: hd
+Password: B4UN6LtkAUYW
+
+We hope you enjoy your new site. Thanks!
+
+--The WordPress Team
+https://wordpress.org/
+

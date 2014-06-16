@@ -1,0 +1,26 @@
+To: hamlet-s-diary@googlegroups.com
+Subject: New WordPress Site
+Date: Tue, 3 Jun 2014 17:12:53 +0000
+Return-Path: <wordpress@>
+From: WordPress <wordpress@>
+Message-ID: <bae1db5771cdfb566aa18c813ea91c25@localhost.localdomain>
+X-Priority: 3
+X-Mailer: PHPMailer 5.2.7 (https://github.com/PHPMailer/PHPMailer/)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Your new WordPress site has been successfully set up at:
+
+http:
+
+You can log in to the administrator account with the following information:
+
+Username: hd
+Password: 2jgLhktfAGbF
+
+We hope you enjoy your new site. Thanks!
+
+--The WordPress Team
+https://wordpress.org/
+
