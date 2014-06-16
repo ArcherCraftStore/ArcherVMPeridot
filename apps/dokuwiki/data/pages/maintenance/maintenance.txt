@@ -1,0 +1,4 @@
+====== Maintaining this VM ======
+
+  - Click on "setup_xampp.bat" often to refresh the entire VM
+  - Change the Drive Letters in the .conf files in the apps folder to the current drive letter of the VM's location

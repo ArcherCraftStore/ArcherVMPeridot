@@ -1,0 +1,6 @@
+conf
+apps
+port
+http
+3306
+8080
