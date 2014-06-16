@@ -1,0 +1,94 @@
+<extension version="3.1" client="site" type="language" method="upgrade">
+	<name>Romanian (ro-RO)</name>
+	<tag>ro-RO</tag>
+	<version>3.1.1.2</version>
+	<creationDate>26/04/2013</creationDate>
+	<author>Romanian Joomla translation team</author>
+	<authorUrl>http://forum.joomla.org/viewforum.php?f=30</authorUrl>
+	<copyright>Copyright (C) 2005 - 2013 Romanian Joomla translation team și Open Source Matters. Toate drepturile rezervate</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>ro-RO site language</description>
+	<files>
+		<filename>index.html</filename>
+		<filename>ro-RO.com_contact.ini</filename>
+		<filename>ro-RO.com_content.ini</filename>
+		<filename>ro-RO.com_finder.ini</filename>
+		<filename>ro-RO.com_mailto.ini</filename>
+		<filename>ro-RO.com_media.ini</filename>
+		<filename>ro-RO.com_messages.ini</filename>
+		<filename>ro-RO.com_newsfeeds.ini</filename>
+		<filename>ro-RO.com_search.ini</filename>
+		<filename>ro-RO.com_tags.ini</filename>
+		<filename>ro-RO.com_users.ini</filename>
+		<filename>ro-RO.com_weblinks.ini</filename>
+		<filename>ro-RO.com_wrapper.ini</filename>
+		<filename>ro-RO.files_joomla.sys.ini</filename>
+		<filename>ro-RO.finder_cli.ini</filename>
+		<filename>ro-RO.ini</filename>
+		<filename>ro-RO.lib_joomla.ini</filename>
+		<filename>ro-RO.lib_joomla.sys.ini</filename>
+		<filename>ro-RO.lib_phpmailer.sys.ini</filename>
+		<filename>ro-RO.lib_phputf8.sys.ini</filename>
+		<filename>ro-RO.lib_simplepie.sys.ini</filename>
+		<filename>ro-RO.localise.php</filename>
+		<filename>ro-RO.mod_articles_archive.ini</filename>
+		<filename>ro-RO.mod_articles_archive.sys.ini</filename>
+		<filename>ro-RO.mod_articles_categories.ini</filename>
+		<filename>ro-RO.mod_articles_categories.sys.ini</filename>
+		<filename>ro-RO.mod_articles_category.ini</filename>
+		<filename>ro-RO.mod_articles_category.sys.ini</filename>
+		<filename>ro-RO.mod_articles_latest.ini</filename>
+		<filename>ro-RO.mod_articles_latest.sys.ini</filename>
+		<filename>ro-RO.mod_articles_news.ini</filename>
+		<filename>ro-RO.mod_articles_news.sys.ini</filename>
+		<filename>ro-RO.mod_articles_popular.ini</filename>
+		<filename>ro-RO.mod_articles_popular.sys.ini</filename>
+		<filename>ro-RO.mod_banners.ini</filename>
+		<filename>ro-RO.mod_banners.sys.ini</filename>
+		<filename>ro-RO.mod_breadcrumbs.ini</filename>
+		<filename>ro-RO.mod_breadcrumbs.sys.ini</filename>
+		<filename>ro-RO.mod_custom.ini</filename>
+		<filename>ro-RO.mod_custom.sys.ini</filename>
+		<filename>ro-RO.mod_feed.ini</filename>
+		<filename>ro-RO.mod_feed.sys.ini</filename>
+		<filename>ro-RO.mod_finder.ini</filename>
+		<filename>ro-RO.mod_finder.sys.ini</filename>
+		<filename>ro-RO.mod_footer.ini</filename>
+		<filename>ro-RO.mod_footer.sys.ini</filename>
+		<filename>ro-RO.mod_languages.ini</filename>
+		<filename>ro-RO.mod_languages.sys.ini</filename>
+		<filename>ro-RO.mod_login.ini</filename>
+		<filename>ro-RO.mod_login.sys.ini</filename>
+		<filename>ro-RO.mod_menu.ini</filename>
+		<filename>ro-RO.mod_menu.sys.ini</filename>
+		<filename>ro-RO.mod_random_image.ini</filename>
+		<filename>ro-RO.mod_random_image.sys.ini</filename>
+		<filename>ro-RO.mod_related_items.ini</filename>
+		<filename>ro-RO.mod_related_items.sys.ini</filename>
+		<filename>ro-RO.mod_search.ini</filename>
+		<filename>ro-RO.mod_search.sys.ini</filename>
+		<filename>ro-RO.mod_stats.ini</filename>
+		<filename>ro-RO.mod_stats.sys.ini</filename>
+		<filename>ro-RO.mod_syndicate.ini</filename>
+		<filename>ro-RO.mod_syndicate.sys.ini</filename>
+		<filename>ro-RO.mod_tags_popular.ini</filename>
+		<filename>ro-RO.mod_tags_popular.sys.ini</filename>
+		<filename>ro-RO.mod_tags_similar.ini</filename>
+		<filename>ro-RO.mod_tags_similar.sys.ini</filename>
+		<filename>ro-RO.mod_users_latest.ini</filename>
+		<filename>ro-RO.mod_users_latest.sys.ini</filename>
+		<filename>ro-RO.mod_weblinks.ini</filename>
+		<filename>ro-RO.mod_weblinks.sys.ini</filename>
+		<filename>ro-RO.mod_whosonline.ini</filename>
+		<filename>ro-RO.mod_whosonline.sys.ini</filename>
+		<filename>ro-RO.mod_wrapper.ini</filename>
+		<filename>ro-RO.mod_wrapper.sys.ini</filename>
+		<filename>ro-RO.tpl_beez3.ini</filename>
+		<filename>ro-RO.tpl_beez3.sys.ini</filename>
+		<filename>ro-RO.tpl_protostar.ini</filename>
+		<filename>ro-RO.tpl_protostar.sys.ini</filename>
+		<filename file="meta">install.xml</filename>
+		<filename file="meta">ro-RO.xml</filename>
+	</files>
+	<params />
+</extension>

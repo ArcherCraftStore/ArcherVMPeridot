@@ -1,0 +1,92 @@
+<extension version="3.1" client="administrator" type="language" method="upgrade">
+	<name>Romanian (ro-RO)</name>
+	<tag>ro-RO</tag>
+	<version>3.1.1.2</version>
+	<creationDate>26/04/2013</creationDate>
+	<author>Romanian Joomla translation team</author>
+	<authorUrl>http://forum.joomla.org/viewforum.php?f=30</authorUrl>
+	<copyright>Copyright (C) 2005 - 2013 Romanian Joomla translation team și Open Source Matters. Toate drepturile rezervate</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>ro-RO administrator language</description>
+	<files>
+		<filename>index.html</filename>
+		<filename>ro-RO.com_admin.ini</filename>
+		<filename>ro-RO.com_admin.sys.ini</filename>
+		<filename>ro-RO.com_cache.ini</filename>
+		<filename>ro-RO.com_cache.sys.ini</filename>
+		<filename>ro-RO.com_categories.ini</filename>
+		<filename>ro-RO.com_categories.sys.ini</filename>
+		<filename>ro-RO.com_installer.ini</filename>
+		<filename>ro-RO.com_installer.sys.ini</filename>
+		<filename>ro-RO.com_joomlaupdate.ini</filename>
+		<filename>ro-RO.com_joomlaupdate.sys.ini</filename>
+		<filename>ro-RO.ini</filename>
+		<filename>ro-RO.lib_joomla.ini</filename>
+		<filename>ro-RO.localise.php</filename>
+		<filename>ro-RO.mod_version.ini</filename>
+		<filename>ro-RO.mod_version.sys.ini</filename>
+		<filename>ro-RO.plg_authentication_joomla.ini</filename>
+		<filename>ro-RO.plg_authentication_joomla.sys.ini</filename>
+		<filename>ro-RO.plg_captcha_recaptcha.ini</filename>
+		<filename>ro-RO.plg_captcha_recaptcha.sys.ini</filename>
+		<filename>ro-RO.plg_content_emailcloak.ini</filename>
+		<filename>ro-RO.plg_content_emailcloak.sys.ini</filename>
+		<filename>ro-RO.plg_content_finder.ini</filename>
+		<filename>ro-RO.plg_content_finder.sys.ini</filename>
+		<filename>ro-RO.plg_content_joomla.ini</filename>
+		<filename>ro-RO.plg_content_joomla.sys.ini</filename>
+		<filename>ro-RO.plg_content_pagebreak.ini</filename>
+		<filename>ro-RO.plg_content_pagebreak.sys.ini</filename>
+		<filename>ro-RO.plg_content_pagenavigation.ini</filename>
+		<filename>ro-RO.plg_content_pagenavigation.sys.ini</filename>
+		<filename>ro-RO.plg_content_vote.ini</filename>
+		<filename>ro-RO.plg_content_vote.sys.ini</filename>
+		<filename>ro-RO.plg_editors-xtd_article.ini</filename>
+		<filename>ro-RO.plg_editors-xtd_article.sys.ini</filename>
+		<filename>ro-RO.plg_editors-xtd_image.ini</filename>
+		<filename>ro-RO.plg_editors-xtd_image.sys.ini</filename>
+		<filename>ro-RO.plg_editors-xtd_pagebreak.ini</filename>
+		<filename>ro-RO.plg_editors-xtd_pagebreak.sys.ini</filename>
+		<filename>ro-RO.plg_editors-xtd_readmore.ini</filename>
+		<filename>ro-RO.plg_editors-xtd_readmore.sys.ini</filename>
+		<filename>ro-RO.plg_editors_none.ini</filename>
+		<filename>ro-RO.plg_editors_none.sys.ini</filename>
+		<filename>ro-RO.plg_editors_tinymce.ini</filename>
+		<filename>ro-RO.plg_editors_tinymce.sys.ini</filename>
+		<filename>ro-RO.plg_extension_joomla.ini</filename>
+		<filename>ro-RO.plg_extension_joomla.sys.ini</filename>
+		<filename>ro-RO.plg_finder_categories.ini</filename>
+		<filename>ro-RO.plg_finder_categories.sys.ini</filename>
+		<filename>ro-RO.plg_finder_contacts.ini</filename>
+		<filename>ro-RO.plg_finder_contacts.sys.ini</filename>
+		<filename>ro-RO.plg_finder_content.ini</filename>
+		<filename>ro-RO.plg_finder_content.sys.ini</filename>
+		<filename>ro-RO.plg_finder_newsfeeds.ini</filename>
+		<filename>ro-RO.plg_finder_newsfeeds.sys.ini</filename>
+		<filename>ro-RO.plg_finder_weblinks.ini</filename>
+		<filename>ro-RO.plg_finder_weblinks.sys.ini</filename>
+		<filename>ro-RO.plg_quickicon_extensionupdate.ini</filename>
+		<filename>ro-RO.plg_quickicon_extensionupdate.sys.ini</filename>
+		<filename>ro-RO.plg_quickicon_joomlaupdate.ini</filename>
+		<filename>ro-RO.plg_quickicon_joomlaupdate.sys.ini</filename>
+		<filename>ro-RO.plg_search_categories.ini</filename>
+		<filename>ro-RO.plg_search_categories.sys.ini</filename>
+		<filename>ro-RO.plg_search_contacts.ini</filename>
+		<filename>ro-RO.plg_search_contacts.sys.ini</filename>
+		<filename>ro-RO.plg_search_content.ini</filename>
+		<filename>ro-RO.plg_search_content.sys.ini</filename>
+		<filename>ro-RO.plg_search_newsfeeds.ini</filename>
+		<filename>ro-RO.plg_search_newsfeeds.sys.ini</filename>
+		<filename>ro-RO.plg_search_weblinks.ini</filename>
+		<filename>ro-RO.plg_search_weblinks.sys.ini</filename>
+		<filename>ro-RO.plg_system_logout.ini</filename>
+		<filename>ro-RO.plg_system_logout.sys.ini</filename>
+		<filename>ro-RO.plg_system_redirect.ini</filename>
+		<filename>ro-RO.plg_system_redirect.sys.ini</filename>
+		<filename>ro-RO.plg_user_profile.ini</filename>
+		<filename>ro-RO.plg_user_profile.sys.ini</filename>
+		<filename file="meta">install.xml</filename>
+		<filename file="meta">ro-RO.xml</filename>
+	</files>
+	<params />
+</extension>

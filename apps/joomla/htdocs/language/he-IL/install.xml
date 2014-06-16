@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" client="site" type="language" method="upgrade">
+	<name>Hebrew (Israel)</name>
+	<tag>he-IL</tag>
+	<version>3.1.1.1</version>
+	<creationDate>2013-05-13</creationDate>
+	<author>Joomla! Israel</author>
+	<authorEmail>info@joomla.org.il</authorEmail>
+	<authorUrl>www.joomla.org.il</authorUrl>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>Hebrew front-end language package</description>
+	<files>
+		<filename>he-IL.com_contact.ini</filename>
+		<filename>he-IL.com_content.ini</filename>
+		<filename>he-IL.com_finder.ini</filename>
+		<filename>he-IL.com_mailto.ini</filename>
+		<filename>he-IL.com_media.ini</filename>
+		<filename>he-IL.com_messages.ini</filename>
+		<filename>he-IL.com_newsfeeds.ini</filename>
+		<filename>he-IL.com_search.ini</filename>
+		<filename>he-IL.com_tags.ini</filename>
+		<filename>he-IL.com_users.ini</filename>
+		<filename>he-IL.com_weblinks.ini</filename>
+		<filename>he-IL.com_wrapper.ini</filename>
+		<filename>he-IL.files_joomla.sys.ini</filename>
+		<filename>he-IL.finder_cli.ini</filename>
+		<filename>he-IL.ini</filename>
+		<filename>he-IL.lib_joomla.ini</filename>
+		<filename>he-IL.lib_joomla.sys.ini</filename>
+		<filename>he-IL.lib_phpmailer.sys.ini</filename>
+		<filename>he-IL.lib_phputf8.sys.ini</filename>
+		<filename>he-IL.lib_simplepie.sys.ini</filename>
+		<filename>he-IL.localise.php</filename>
+		<filename>he-IL.mod_articles_archive.ini</filename>
+		<filename>he-IL.mod_articles_archive.sys.ini</filename>
+		<filename>he-IL.mod_articles_categories.ini</filename>
+		<filename>he-IL.mod_articles_categories.sys.ini</filename>
+		<filename>he-IL.mod_articles_category.ini</filename>
+		<filename>he-IL.mod_articles_category.sys.ini</filename>
+		<filename>he-IL.mod_articles_latest.ini</filename>
+		<filename>he-IL.mod_articles_latest.sys.ini</filename>
+		<filename>he-IL.mod_articles_news.ini</filename>
+		<filename>he-IL.mod_articles_news.sys.ini</filename>
+		<filename>he-IL.mod_articles_popular.ini</filename>
+		<filename>he-IL.mod_articles_popular.sys.ini</filename>
+		<filename>he-IL.mod_banners.ini</filename>
+		<filename>he-IL.mod_banners.sys.ini</filename>
+		<filename>he-IL.mod_breadcrumbs.ini</filename>
+		<filename>he-IL.mod_breadcrumbs.sys.ini</filename>
+		<filename>he-IL.mod_custom.ini</filename>
+		<filename>he-IL.mod_custom.sys.ini</filename>
+		<filename>he-IL.mod_feed.ini</filename>
+		<filename>he-IL.mod_feed.sys.ini</filename>
+		<filename>he-IL.mod_finder.ini</filename>
+		<filename>he-IL.mod_finder.sys.ini</filename>
+		<filename>he-IL.mod_footer.ini</filename>
+		<filename>he-IL.mod_footer.sys.ini</filename>
+		<filename>he-IL.mod_languages.ini</filename>
+		<filename>he-IL.mod_languages.sys.ini</filename>
+		<filename>he-IL.mod_login.ini</filename>
+		<filename>he-IL.mod_login.sys.ini</filename>
+		<filename>he-IL.mod_menu.ini</filename>
+		<filename>he-IL.mod_menu.sys.ini</filename>
+		<filename>he-IL.mod_random_image.ini</filename>
+		<filename>he-IL.mod_random_image.sys.ini</filename>
+		<filename>he-IL.mod_related_items.ini</filename>
+		<filename>he-IL.mod_related_items.sys.ini</filename>
+		<filename>he-IL.mod_search.ini</filename>
+		<filename>he-IL.mod_search.sys.ini</filename>
+		<filename>he-IL.mod_stats.ini</filename>
+		<filename>he-IL.mod_stats.sys.ini</filename>
+		<filename>he-IL.mod_syndicate.ini</filename>
+		<filename>he-IL.mod_syndicate.sys.ini</filename>
+		<filename>he-IL.mod_tags_popular.ini</filename>
+		<filename>he-IL.mod_tags_popular.sys.ini</filename>
+		<filename>he-IL.mod_tags_similar.ini</filename>
+		<filename>he-IL.mod_tags_similar.sys.ini</filename>
+		<filename>he-IL.mod_users_latest.ini</filename>
+		<filename>he-IL.mod_users_latest.sys.ini</filename>
+		<filename>he-IL.mod_weblinks.ini</filename>
+		<filename>he-IL.mod_weblinks.sys.ini</filename>
+		<filename>he-IL.mod_whosonline.ini</filename>
+		<filename>he-IL.mod_whosonline.sys.ini</filename>
+		<filename>he-IL.mod_wrapper.ini</filename>
+		<filename>he-IL.mod_wrapper.sys.ini</filename>
+		<filename>he-IL.tpl_beez3.ini</filename>
+		<filename>he-IL.tpl_beez3.sys.ini</filename>
+		<filename>he-IL.tpl_protostar.ini</filename>
+		<filename>he-IL.tpl_protostar.sys.ini</filename>
+		<filename>index.html</filename>
+		<filename file="meta">install.xml</filename>
+		<filename file="meta">he-IL.xml</filename>
+	</files>
+	<metadata>
+		<name>Hebrew</name>
+		<tag>he-IL</tag>
+		<rtl>1</rtl>
+		<locale>he_IL.utf8, he_IL.UTF-8, he_IL, heb_IL, he, hebrew, hebrew-il, il, israel, heb</locale>
+		<firstDay>0</firstDay>
+	</metadata>	
+	<params />
+</extension>
