@@ -1,0 +1,197 @@
+<?php
+/**
+ * @file
+ * Code for the OpenAtrium2 Section Pages feature.
+ */
+
+include_once 'oa_sections.features.inc';
+
+/**
+ * Name of default OpenAtrium Group field in Section.
+ */
+define('OA_GROUP_FIELD', 'field_oa_group_ref');
+/**
+ * Name of default OpenAtrium Team field in Section.
+ */
+define('OA_TEAM_FIELD', 'field_oa_team_ref');
+/**
+ * Name of default OpenAtrium User field in Section.
+ */
+define('OA_USER_FIELD', 'field_oa_user_ref');
+
+/**
+ * Implements hook_menu().
+ */
+function oa_sections_menu() {
+  $items = array();
+  $items['node/add/oa-section/%'] = array(
+    'title' => 'Create Section',
+    'page callback' => 'oa_core_create_space_page_callback',
+    'page arguments' => array('oa_section', 3),
+    'access callback' => 'node_access',
+    'access arguments' => array('create', 'oa_section'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_og_menu_single_menu_parent().
+ */
+function oa_sections_og_menu_single_menu_parent($conf) {
+  if ($plid = og_menu_single_get_active_plid()) {
+    $node = menu_get_object();
+    if ($node && $node->type == 'oa_section') {
+      // Menu will be cached via core, so just get it.and look for the parent
+      $section_id = $node->nid;
+    }
+    elseif ($node && ($values = field_get_items('node', $node, 'oa_section_ref'))) {
+      $value = reset($values);
+      $section_id = $value['target_id'];
+    }
+    else {
+      $section_id = oa_core_get_section_context();
+    }
+    // If in a section, find the the secondary link that section is in.
+    if ($section_id) {
+      if ($mlid = og_menu_single_get_link_mlid('node', $section_id)) {
+        foreach (og_menu_single_children_items($plid) as $item) {
+          if (_oa_sections_is_parent($item, $mlid)) {
+            return $item['link']['mlid'];
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Helpder function to determine if an item or it's children have a mlid.
+ */
+function _oa_sections_is_parent($item, $mlid) {
+  if ($item['link']['mlid'] == $mlid) {
+    return TRUE;
+  }
+  foreach ($item['below'] as $child_item) {
+    if (_oa_sections_is_parent($child_item, $mlid)) {
+      return TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_query_TAG_alter().
+ */
+function oa_sections_query_entityreference_alter($query) {
+  $field = $query->alterMetaData['entityreference_selection_handler']->field;
+  $current_query_conditions = $query->alterMetaData['entity_field_query']->entityConditions;
+  if ($field && $field['field_name'] == 'oa_section_ref' && empty($current_query_conditions['entity_id'])) {
+    $entity = $query->alterMetaData['entityreference_selection_handler']->entity;
+
+    // A space is active, limit to sections in that space.
+    if ($value = _oa_sections_get_current_selected_space($entity)) {
+      $query->join('og_membership', 'omrol', 'node.nid = omrol.etid and omrol.entity_type = :entity_type AND omrol.field_name = :field_name AND omrol.gid = :target_id', array(':target_id' => $value, ':entity_type' => 'node', ':field_name' => 'og_group_ref'));
+    }
+    // Don't want to show all sections ever, so zero it out.
+    else {
+      $query->condition('1', '0', '=');
+    }
+  }
+}
+
+/**
+ * Get the currently selected group.
+ */
+function _oa_sections_get_current_selected_space($entity, $set_value = NULL) {
+  static $found_value;
+  if (isset($set_value)) {
+    $found_value = $set_value;
+  }
+  if (isset($found_value)) {
+    return $found_value ? $found_value : NULL;
+  }
+  $value = NULL;
+  if (isset($_POST['og_group_ref'])) {
+    $process = $_POST['og_group_ref'];
+  }
+  elseif ($entity && isset($entity->og_group_ref)) {
+    $process = $entity->og_group_ref;
+  }
+  // First check active view filter
+  if (!empty($_GET['og_group_ref_target_id'])) {
+    $value = $_GET['og_group_ref_target_id'];
+  }
+  // For panelizer settings.
+  elseif (!empty($_POST['exposed']['og_group_ref_target_id'])) {
+    $value = $_POST['exposed']['og_group_ref_target_id'];
+  }
+  // Check post or entity values.
+  elseif (isset($process) && is_array($process)) {
+    if (!empty($process[LANGUAGE_NONE][0]['target_id'])) {
+      $value = $process[LANGUAGE_NONE][0]['target_id'];
+    }
+    elseif (!empty($process[LANGUAGE_NONE][0]['default'])) {
+      $value = $process[LANGUAGE_NONE][0]['default'];
+    }
+  }
+  else {
+    $value = oa_core_get_space_context();
+  }
+  $found_value = $value;
+  // Make sure the current user has access.
+  if (!is_numeric($value) || !($node = node_load($value)) || !node_access('view', $node)) {
+    $found_value = FALSE;
+    return NULL;
+  }
+  return $value;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function oa_sections_form_oa_section_node_form_alter(&$form, &$form_state, $form_id) {
+  // If we are on the node add form that is specific to this Section type, we
+  // take the 'Section type' from the URL and hide the field.
+  if (arg(0) == 'node' && arg(1) == 'add' && arg(2) == 'oa-section' && ($section_tid = arg(3)) && !empty($section_tid)) {
+    $form['field_oa_section']['und']['#default_value'] = array($section_tid);
+    $form['field_oa_section']['#access'] = FALSE;
+  }
+
+  _oa_core_hide_comment_settings($form);
+  _oa_core_setup_node_space_type($form, 'section_type', 'field_oa_section');
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function oa_sections_form_taxonomy_form_term_alter(&$form, &$form_state, $form_id) {
+  if ($form['#vocabulary']->machine_name  == 'section_type') {
+    _oa_core_setup_taxonomy_space_type($form, 'oa_section');
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function oa_sections_views_pre_render(&$view) {
+  if ($view->name == 'oa_sections_section_types') {
+    if (count($view->result) == 1) {
+      // If there is only one Section type, then we jump to it automatically.
+      $args = $_GET;
+      unset($args['q']);
+      drupal_goto('node/add/oa-section/' . $view->result[0]->tid, array('query' => $args));
+    }
+    elseif (user_access('administer taxonomy')) {
+      $view->attachment_before = '<p>' . t('Manage existing <em>Section types</em> or add new ones by <a href="!url">administrating the taxonomy</a>.', array('!url' => url('admin/structure/taxonomy/section_type'))) . '</p>';
+    }
+  }
+}
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function oa_sections_views_pre_view(&$view) {
+  if ($view->name == 'oa_sections_section_types') {
+    oa_core_views_copy_get_arguments_to_link($view);
+  }
+}

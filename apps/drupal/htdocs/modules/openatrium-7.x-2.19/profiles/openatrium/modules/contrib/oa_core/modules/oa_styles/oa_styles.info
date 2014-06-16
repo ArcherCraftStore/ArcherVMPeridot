@@ -1,0 +1,12 @@
+name = Open Atrium Styles
+description = Various styles for Open Atrium's Panel/Bootstrap theme
+package = Open Atrium
+core = 7.x
+
+dependencies[] = ctools
+; Information added by Drupal.org packaging script on 2014-05-30
+version = "7.x-2.19"
+core = "7.x"
+project = "oa_core"
+datestamp = "1401462830"
+

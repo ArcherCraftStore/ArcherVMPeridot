@@ -1,0 +1,13 @@
+name = Geocoder
+description = An API and widget to geocode various known data into other GIS data types.
+core = 7.x
+dependencies[] = geophp
+dependencies[] = ctools
+
+
+; Information added by drush on 2014-05-30
+version = "7.x-1.2+9-dev"
+core = "7.x"
+project = "geocoder"
+datestamp = "1401469538"
+

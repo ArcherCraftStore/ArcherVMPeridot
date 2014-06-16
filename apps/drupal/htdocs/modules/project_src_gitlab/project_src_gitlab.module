@@ -1,0 +1,123 @@
+<?php
+
+/**
+ * @file
+ * Hooks and functions for the Project Source: GitLab module.
+ */
+
+
+/**
+ * Defines the API version with which we integrate.
+ */
+define('PROJECT_SRC_GITLAB_API_VERSION', 'api/v3');
+
+/**
+ * Includes a private/helpers file. These should not be used by other modules.
+ */
+require_once(dirname(__FILE__) . '/includes/project_src_gitlab.private.inc');
+
+
+/**
+ * Implements hook_menu().
+ */
+function project_src_gitlab_menu() {
+  // Admin callback.
+  $items['admin/config/development/gitlab-src'] = array(
+    'title' => 'Project Source: GitLab',
+    'description' => 'Configure GitLab API options for the Project Source module.', 
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('project_src_gitlab_settings'),
+    'access arguments' => array('administer project gitlab src'),
+    'file' => 'project_src_gitlab.admin.inc',
+  );
+
+  // Callback to download archive packages without revealing the private token.
+  $items['drupal/release-files/%/%/%/download.tar.gz'] = array(
+    'title' => 'File download callback for a specific project release',
+    'delivery callback' => 'project_src_deliver_clean_page',
+    'page callback' => 'project_src_gitlab_get_archive',
+    'page arguments' => array(2, 3, 4),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  // Callback to respond to GitLab webhooks.
+  $items['drupal/gitlab/webhook'] = array(
+    'title' => 'GitLab web hook endpoint',
+    'description' => 'Common URL to handle GitLab web hook requests',
+    'page callback' => 'project_src_gitlab_webhook',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'includes/project_src_gitlab.webhook.inc',
+  );
+
+  return $items;
+}
+
+
+/**
+ * Implements hook_permission().
+ */
+function project_src_gitlab_permission() {
+  return array(
+    'administer project gitlab src' => array(
+      'title' => t('Administer Project Source: GitLab'),
+      'description' => t('Perform administration tasks for Project Source: GitLab'),
+      'restrict access' => TRUE,
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_hook_info().
+ */
+function project_src_gitlab_hook_info() {
+  return array(
+    'project_src_gitlab_webhook' => array(
+      'group' => 'project_src',
+    ),
+  );
+}
+
+
+/**
+ * Menu callback that returns the archive from GitLab in a way that doesn't
+ * expose the private token.
+ *
+ * @param $namespace
+ *   The namespace (or group) under which the project exists.
+ *
+ * @param $project_name
+ *   The name of the project.
+ *
+ * @param $version
+ *   The version of the project.
+ *
+ * @return
+ *   The archive as a string, suitable for streaming.
+ */
+function project_src_gitlab_get_archive($namespace, $project_name, $version) {
+  $gitlab = variable_get('project_src_gitlab_url', 'https://gitlab.com');
+  $get = $gitlab . '/' . $namespace . '/' . $project_name . '/repository/archive';
+
+  if ($file = _project_src_gitlab_file_as_string($get, $version)) {
+    drupal_add_http_header('Content-type', 'application/octet-stream');
+    drupal_add_http_header('Content-transfer-encoding', 'binary');
+    drupal_add_http_header('Content-disposition', 'attachment; filename="' . $project_name . '-' . $version . '.tar.gz"');
+  }
+  else {
+    $file = '';
+  }
+
+  return $file;
+}
+
+
+/**
+ * Clears Project Source: GitLab's cached projects, releases and XML.
+ */
+function project_src_gitlab_clear_cache() {
+  cache_clear_all('project_src_gitlab', 'cache', TRUE);
+  cache_clear_all('%/drupal/release-history/', 'cache_page', TRUE);
+}
