@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Install hooks and functions for the Project Source: GitLab module.
+ */
+
+
+/**
+ * Implements hook_uninstall().
+ */
+function project_src_gitlab_uninstall() {
+  $vars = array('project_src_gitlab_url', 'project_src_gitlab_token');
+
+   foreach ($vars as $var) {
+     variable_del($var);
+   }
+}
