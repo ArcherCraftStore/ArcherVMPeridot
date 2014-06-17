@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Celluloid - celluloid-0.15.2 Documentation</title>
+
+<link href="./fonts.css" rel="stylesheet">
+<link href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/search_index.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/searcher.js"></script>
+<script src="./js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-actor-3F">#actor?</a>
+    
+    <li ><a href="#method-i-boot">#boot</a>
+    
+    <li ><a href="#method-i-cores">#cores</a>
+    
+    <li ><a href="#method-i-detect_recursion">#detect_recursion</a>
+    
+    <li ><a href="#method-i-exception_handler">#exception_handler</a>
+    
+    <li ><a href="#method-i-included">#included</a>
+    
+    <li ><a href="#method-i-init">#init</a>
+    
+    <li ><a href="#method-i-mailbox">#mailbox</a>
+    
+    <li ><a href="#method-i-register_shutdown">#register_shutdown</a>
+    
+    <li ><a href="#method-i-running-3F">#running?</a>
+    
+    <li ><a href="#method-i-shutdown">#shutdown</a>
+    
+    <li ><a href="#method-i-stack_dump">#stack_dump</a>
+    
+    <li ><a href="#method-i-start">#start</a>
+    
+    <li ><a href="#method-i-suspend">#suspend</a>
+    
+    <li ><a href="#method-i-uuid">#uuid</a>
+    
+    <li ><a href="#method-i-version">#version</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Celluloid">
+  <h1 id="module-Celluloid" class="module">
+    module Celluloid
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="BARE_OBJECT_WARNING_MESSAGE">BARE_OBJECT_WARNING_MESSAGE
+        
+        <dd><p>Warning message added to Celluloid objects accessed outside their actors</p>
+        
+      
+        <dt id="Error">Error
+        
+        <dd>
+        
+      
+        <dt id="LINKING_TIMEOUT">LINKING_TIMEOUT
+        
+        <dd>
+        
+      
+        <dt id="OWNER_IVAR">OWNER_IVAR
+        
+        <dd>
+        
+      
+        <dt id="TIMER_QUANTUM">TIMER_QUANTUM
+        
+        <dd><p>Timer accuracy enforced by the tests (50ms)</p>
+        
+      
+        <dt id="TaskSet">TaskSet
+        
+        <dd><p>Assume we’re on MRI, where we have the GIL. But what about IronRuby? Or
+MacRuby. Do people care? This will break Celluloid::StackDumps</p>
+        
+      
+        <dt id="VERSION">VERSION
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-c-internal_pool" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">internal_pool</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-c-logger" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">logger</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-c-shutdown_timeout" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">shutdown_timeout</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-c-task_class" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">task_class</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-actor-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">actor?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Are we currently inside of an actor?</p>
+          
+          
+
+          
+          <div class="method-source-code" id="actor-3F-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">actor?</span>
+  <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>[<span class="ruby-value">:celluloid_actor</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-boot" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">boot</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="boot-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">boot</span>
+  <span class="ruby-identifier">init</span>
+  <span class="ruby-identifier">start</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cores" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cores</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Obtain the number of CPUs in the system</p>
+          
+          
+
+          
+          <div class="method-source-code" id="cores-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cores</span>
+ <span class="ruby-constant">CPUCounter</span>.<span class="ruby-identifier">cores</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-detect_recursion" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">detect_recursion</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Detect if a particular call is recursing through multiple actors</p>
+          
+          
+
+          
+          <div class="method-source-code" id="detect_recursion-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">detect_recursion</span>
+  <span class="ruby-identifier">actor</span> = <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>[<span class="ruby-value">:celluloid_actor</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">actor</span>
+
+  <span class="ruby-identifier">task</span> = <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>[<span class="ruby-value">:celluloid_task</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">task</span>
+
+  <span class="ruby-identifier">chain_id</span> = <span class="ruby-constant">CallChain</span>.<span class="ruby-identifier">current_id</span>
+  <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">tasks</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">any?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">task</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">chain_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">chain_id</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-exception_handler" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">exception_handler</span><span
+            class="method-args">(&block)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Define an exception handler for actor crashes</p>
+          
+          
+
+          
+          <div class="method-source-code" id="exception_handler-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exception_handler</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">Logger</span>.<span class="ruby-identifier">exception_handler</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-included" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">included</span><span
+            class="method-args">(klass)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="included-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">included</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:extend</span>,  <span class="ruby-constant">ClassMethods</span>
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:include</span>, <span class="ruby-constant">InstanceMethods</span>
+
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:extend</span>, <span class="ruby-constant">Properties</span>
+
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">property</span> <span class="ruby-value">:mailbox_class</span>, <span class="ruby-value">:default</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Celluloid</span><span class="ruby-operator">::</span><span class="ruby-constant">Mailbox</span>
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">property</span> <span class="ruby-value">:proxy_class</span>,   <span class="ruby-value">:default</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Celluloid</span><span class="ruby-operator">::</span><span class="ruby-constant">ActorProxy</span>
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">property</span> <span class="ruby-value">:task_class</span>,    <span class="ruby-value">:default</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Celluloid</span>.<span class="ruby-identifier">task_class</span>
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">property</span> <span class="ruby-value">:mailbox_size</span>
+
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">property</span> <span class="ruby-value">:execute_block_on_receiver</span>,
+    <span class="ruby-value">:default</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:after</span>, <span class="ruby-value">:every</span>, <span class="ruby-value">:receive</span>],
+    <span class="ruby-value">:multi</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>
+
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">property</span> <span class="ruby-value">:finalizer</span>
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">property</span> <span class="ruby-value">:exit_handler</span>
+
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:define_singleton_method</span>, <span class="ruby-value">:trap_exit</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">args</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">exit_handler</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-init" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">init</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="init-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">init</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">internal_pool</span> = <span class="ruby-constant">InternalPool</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-mailbox" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mailbox</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieve the mailbox for the current thread or lazily initialize it</p>
+          
+          
+
+          
+          <div class="method-source-code" id="mailbox-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mailbox</span>
+  <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>[<span class="ruby-value">:celluloid_mailbox</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Celluloid</span><span class="ruby-operator">::</span><span class="ruby-constant">Mailbox</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-register_shutdown" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">register_shutdown</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="register_shutdown-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">register_shutdown</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@shutdown_registered</span>
+  <span class="ruby-comment"># Terminate all actors at exit</span>
+  <span class="ruby-identifier">at_exit</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">RUBY_ENGINE</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RUBY_ENGINE</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;ruby&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RUBY_VERSION</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-string">&quot;1.9&quot;</span>
+      <span class="ruby-comment"># workaround for MRI bug losing exit status in at_exit block</span>
+      <span class="ruby-comment"># http://bugs.ruby-lang.org/issues/5218</span>
+      <span class="ruby-identifier">exit_status</span> = <span class="ruby-identifier">$!</span>.<span class="ruby-identifier">status</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$!</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">SystemExit</span>)
+      <span class="ruby-constant">Celluloid</span>.<span class="ruby-identifier">shutdown</span>
+      <span class="ruby-identifier">exit</span> <span class="ruby-identifier">exit_status</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">exit_status</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Celluloid</span>.<span class="ruby-identifier">shutdown</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@shutdown_registered</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-running-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">running?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="running-3F-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">running?</span>
+  <span class="ruby-identifier">internal_pool</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-shutdown" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shutdown</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Shut down all running actors</p>
+          
+          
+
+          
+          <div class="method-source-code" id="shutdown-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shutdown</span>
+  <span class="ruby-identifier">actors</span> = <span class="ruby-constant">Actor</span>.<span class="ruby-identifier">all</span>
+
+  <span class="ruby-constant">Timeout</span>.<span class="ruby-identifier">timeout</span>(<span class="ruby-identifier">shutdown_timeout</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">internal_pool</span>.<span class="ruby-identifier">shutdown</span>
+
+    <span class="ruby-constant">Logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;Terminating #{actors.size} #{(actors.size &gt; 1) ? 'actors' : 'actor'}...&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">actors</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+
+    <span class="ruby-comment"># Attempt to shut down the supervision tree, if available</span>
+    <span class="ruby-constant">Supervisor</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">terminate</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Supervisor</span>.<span class="ruby-identifier">root</span>
+
+    <span class="ruby-comment"># Actors cannot self-terminate, you must do it for them</span>
+    <span class="ruby-identifier">actors</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">actor</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">terminate!</span>
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DeadActorError</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">actors</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">actor</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-constant">Actor</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">actor</span>)
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DeadActorError</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>
+  <span class="ruby-constant">Logger</span>.<span class="ruby-identifier">error</span>(<span class="ruby-node">&quot;Couldn't cleanly terminate all actors in #{shutdown_timeout} seconds!&quot;</span>)
+  <span class="ruby-identifier">actors</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">actor</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-constant">Actor</span>.<span class="ruby-identifier">kill</span>(<span class="ruby-identifier">actor</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DeadActorError</span>, <span class="ruby-constant">MailboxDead</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-identifier">internal_pool</span>.<span class="ruby-identifier">kill</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-stack_dump" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">stack_dump</span><span
+            class="method-args">(output = STDERR)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Perform a stack dump of all actors to the given output object</p>
+          
+          
+
+          
+          <div class="method-source-code" id="stack_dump-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stack_dump</span>(<span class="ruby-identifier">output</span> = <span class="ruby-constant">STDERR</span>)
+  <span class="ruby-constant">Celluloid</span><span class="ruby-operator">::</span><span class="ruby-constant">StackDump</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">output</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-start" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">start</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Launch default services FIXME: We should set up the supervision hierarchy
+here</p>
+          
+          
+
+          
+          <div class="method-source-code" id="start-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">start</span>
+  <span class="ruby-constant">Celluloid</span><span class="ruby-operator">::</span><span class="ruby-constant">Notifications</span><span class="ruby-operator">::</span><span class="ruby-constant">Fanout</span>.<span class="ruby-identifier">supervise_as</span> <span class="ruby-value">:notifications_fanout</span>
+  <span class="ruby-constant">Celluloid</span><span class="ruby-operator">::</span><span class="ruby-constant">IncidentReporter</span>.<span class="ruby-identifier">supervise_as</span> <span class="ruby-value">:default_incident_reporter</span>, <span class="ruby-constant">STDERR</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-suspend" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">suspend</span><span
+            class="method-args">(status, waiter)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="suspend-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">suspend</span>(<span class="ruby-identifier">status</span>, <span class="ruby-identifier">waiter</span>)
+  <span class="ruby-identifier">task</span> = <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>[<span class="ruby-value">:celluloid_task</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">task</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">Celluloid</span>.<span class="ruby-identifier">exclusive?</span>
+    <span class="ruby-identifier">waiter</span>.<span class="ruby-identifier">before_suspend</span>(<span class="ruby-identifier">task</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">waiter</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:before_suspend</span>)
+    <span class="ruby-constant">Task</span>.<span class="ruby-identifier">suspend</span>(<span class="ruby-identifier">status</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">waiter</span>.<span class="ruby-identifier">wait</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-uuid" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">uuid</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Generate a Universally Unique Identifier</p>
+          
+          
+
+          
+          <div class="method-source-code" id="uuid-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">uuid</span>
+  <span class="ruby-constant">UUID</span>.<span class="ruby-identifier">generate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-version" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">version</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="version-source">
+            <pre><span class="ruby-comment"># File lib/celluloid.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">version</span>
+  <span class="ruby-constant">VERSION</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Celluloid::ActorProxy - celluloid-0.15.2 Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">SyncProxy
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-__class__">#__class__</a>
+    
+    <li ><a href="#method-i-_send_">#_send_</a>
+    
+    <li ><a href="#method-i-alive-3F">#alive?</a>
+    
+    <li ><a href="#method-i-async">#async</a>
+    
+    <li ><a href="#method-i-future">#future</a>
+    
+    <li ><a href="#method-i-inspect">#inspect</a>
+    
+    <li ><a href="#method-i-method">#method</a>
+    
+    <li ><a href="#method-i-terminate">#terminate</a>
+    
+    <li ><a href="#method-i-terminate-21">#terminate!</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Celluloid::ActorProxy">
+  <h1 id="class-Celluloid::ActorProxy" class="class">
+    class Celluloid::ActorProxy
+  </h1>
+
+  <section class="description">
+    
+<p>A proxy object returned from <a
+href="Actor.html#method-c-new">Celluloid::Actor.new</a>/new_link which
+converts the normal Ruby method protocol into an inter-actor message
+protocol</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-thread" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">thread</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(actor)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              
+            </div>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/celluloid/proxies/actor_proxy.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">actor</span>)
+  <span class="ruby-ivar">@thread</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">thread</span>
+
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">mailbox</span>, <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">subject</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>)
+  <span class="ruby-ivar">@sync_proxy</span>   = <span class="ruby-constant">SyncProxy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@mailbox</span>, <span class="ruby-ivar">@klass</span>)
+  <span class="ruby-ivar">@async_proxy</span>  = <span class="ruby-constant">AsyncProxy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@mailbox</span>, <span class="ruby-ivar">@klass</span>)
+  <span class="ruby-ivar">@future_proxy</span> = <span class="ruby-constant">FutureProxy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@mailbox</span>, <span class="ruby-ivar">@klass</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-__class__" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">__class__</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Used for reflecting on proxy objects themselves</p>
+          
+          
+
+          
+          <div class="method-source-code" id="__class__-source">
+            <pre><span class="ruby-comment"># File lib/celluloid/proxies/actor_proxy.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">__class__</span>; <span class="ruby-constant">ActorProxy</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-_send_" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">_send_</span><span
+            class="method-args">(meth, *args, &block)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="_send_-source">
+            <pre><span class="ruby-comment"># File lib/celluloid/proxies/actor_proxy.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">_send_</span>(<span class="ruby-identifier">meth</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">method_missing</span> <span class="ruby-value">:__send__</span>, <span class="ruby-identifier">meth</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-alive-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">alive?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="alive-3F-source">
+            <pre><span class="ruby-comment"># File lib/celluloid/proxies/actor_proxy.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">alive?</span>
+  <span class="ruby-ivar">@mailbox</span>.<span class="ruby-identifier">alive?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-async" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">async</span><span
+            class="method-args">(method_name = nil, *args, &block)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Obtain an async proxy or explicitly invoke a named async method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="async-source">
+            <pre><span class="ruby-comment"># File lib/celluloid/proxies/actor_proxy.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">async</span>(<span class="ruby-identifier">method_name</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">method_name</span>
+    <span class="ruby-ivar">@async_proxy</span>.<span class="ruby-identifier">method_missing</span> <span class="ruby-identifier">method_name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@async_proxy</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-future" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">future</span><span
+            class="method-args">(method_name = nil, *args, &block)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Obtain a future proxy or explicitly invoke a named future method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="future-source">
+            <pre><span class="ruby-comment"># File lib/celluloid/proxies/actor_proxy.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">future</span>(<span class="ruby-identifier">method_name</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">method_name</span>
+    <span class="ruby-ivar">@future_proxy</span>.<span class="ruby-identifier">method_missing</span> <span class="ruby-identifier">method_name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@future_proxy</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-inspect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">inspect</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="inspect-source">
+            <pre><span class="ruby-comment"># File lib/celluloid/proxies/actor_proxy.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inspect</span>
+  <span class="ruby-identifier">method_missing</span> <span class="ruby-value">:inspect</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">DeadActorError</span>
+  <span class="ruby-node">&quot;#&lt;Celluloid::ActorProxy(#{@klass}) dead&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-method" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">method</span><span
+            class="method-args">(name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="method-source">
+            <pre><span class="ruby-comment"># File lib/celluloid/proxies/actor_proxy.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">method</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-constant">Method</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-terminate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">terminate</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Terminate the associated actor</p>
+          
+          
+
+          
+          <div class="method-source-code" id="terminate-source">
+            <pre><span class="ruby-comment"># File lib/celluloid/proxies/actor_proxy.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">terminate</span>
+  <span class="ruby-identifier">terminate!</span>
+  <span class="ruby-constant">Actor</span>.<span class="ruby-identifier">join</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-terminate-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">terminate!</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Terminate the associated actor asynchronously</p>
+          
+          
+
+          
+          <div class="method-source-code" id="terminate-21-source">
+            <pre><span class="ruby-comment"># File lib/celluloid/proxies/actor_proxy.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">terminate!</span>
+  <span class="ruby-operator">::</span><span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">raise</span> <span class="ruby-constant">DeadActorError</span>, <span class="ruby-string">&quot;actor already terminated&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">alive?</span>
+  <span class="ruby-ivar">@mailbox</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">TerminationRequest</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

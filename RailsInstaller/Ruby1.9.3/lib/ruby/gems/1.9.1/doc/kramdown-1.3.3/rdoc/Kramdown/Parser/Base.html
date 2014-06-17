@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Kramdown::Parser::Base - kramdown-1.3.3 Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#class-Kramdown::Parser::Base-label-Base+class+for+parsers">Base class for parsers</a>
+    <li><a href="#class-Kramdown::Parser::Base-label-Implementing+a+parser">Implementing a parser</a>
+  </ul>
+</div>
+
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-parse">::parse</a>
+    
+    <li ><a href="#method-i-adapt_source">#adapt_source</a>
+    
+    <li ><a href="#method-i-add_text">#add_text</a>
+    
+    <li ><a href="#method-i-extract_string">#extract_string</a>
+    
+    <li ><a href="#method-i-parse">#parse</a>
+    
+    <li ><a href="#method-i-warning">#warning</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Kramdown::Parser::Base">
+  <h1 id="class-Kramdown::Parser::Base" class="class">
+    class Kramdown::Parser::Base
+  </h1>
+
+  <section class="description">
+    
+<h2 id="class-Kramdown::Parser::Base-label-Base+class+for+parsers">Base class for parsers<span><a href="#class-Kramdown::Parser::Base-label-Base+class+for+parsers">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>This class serves as base class for parsers. It provides common methods
+that can/should be used by all parsers, especially by those using
+StringScanner(Kramdown) for parsing.</p>
+
+<p>A parser object is used as a throw-away object, i.e. it is only used for
+storing the needed state information during parsing. Therefore one can’t
+instantiate a parser object directly but only use the <a
+href="Base.html#method-c-parse">::parse</a> method.</p>
+
+<h2 id="class-Kramdown::Parser::Base-label-Implementing+a+parser">Implementing a parser<span><a href="#class-Kramdown::Parser::Base-label-Implementing+a+parser">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Implementing a new parser is rather easy: just derive a new class from this
+class and put it in the <a href="../Parser.html">Kramdown::Parser</a>
+module – the latter is needed so that the auto-detection of the new parser
+works correctly. Then you need to implement the <code>#parse</code> method
+which has to contain the parsing code.</p>
+
+<p>Have a look at the <a href="Base.html#method-c-parse">::parse</a>,
+Base::new and <a href="Base.html#method-i-parse">#parse</a> methods for
+additional information!</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-options" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">options</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>The hash with the parsing options.</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-root" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">root</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>The root element of element tree that is created from the source string.</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-source" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">source</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>The original source string.</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-warnings" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">warnings</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>The array with the parser warnings.</p>
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-parse" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">parse</span><span
+            class="method-args">(source, options = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Parse the <code>source</code> string into an element tree, possibly using
+the parsing <code>options</code>, and return the root element of the
+element tree and an array with warning messages.</p>
+
+<p>Initializes a new instance of the calling class and then calls the
+<code>#parse</code> method that must be implemented by each subclass.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="parse-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/parser/base.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">parser</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">parse</span>
+  [<span class="ruby-identifier">parser</span>.<span class="ruby-identifier">root</span>, <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">warnings</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-adapt_source" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">adapt_source</span><span
+            class="method-args">(source)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Modify the string <code>source</code> to be usable by the parser (unifies
+line ending characters to <code>\n</code> and makes sure
+<code>source</code> ends with a new line character).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="adapt_source-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/parser/base.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">adapt_source</span>(<span class="ruby-identifier">source</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:encode</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;The encoding of the source text is not valid!&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">source</span>.<span class="ruby-identifier">valid_encoding?</span>
+    <span class="ruby-identifier">source</span> = <span class="ruby-identifier">source</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-string">'UTF-8'</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">source</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\r\n?/</span>, <span class="ruby-string">&quot;\n&quot;</span>).<span class="ruby-identifier">chomp</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-add_text" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_text</span><span
+            class="method-args">(text, tree = @tree, type = @text_type)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>This helper method adds the given <code>text</code> either to the last
+element in the <code>tree</code> if it is a <code>type</code> element or
+creates a new text element with the given <code>type</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="add_text-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/parser/base.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_text</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">tree</span> = <span class="ruby-ivar">@tree</span>, <span class="ruby-identifier">type</span> = <span class="ruby-ivar">@text_type</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">type</span>
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">text</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">children</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">text</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-extract_string" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">extract_string</span><span
+            class="method-args">(range, strscan)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Extract the part of the StringScanner <code>strscan</code> backed string
+specified by the <code>range</code>. This method works correctly under Ruby
+1.8 and Ruby 1.9.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="extract_string-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/parser/base.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">extract_string</span>(<span class="ruby-identifier">range</span>, <span class="ruby-identifier">strscan</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">strscan</span>.<span class="ruby-identifier">string</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:encoding</span>)
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">enc</span> = <span class="ruby-identifier">strscan</span>.<span class="ruby-identifier">string</span>.<span class="ruby-identifier">encoding</span>
+      <span class="ruby-identifier">strscan</span>.<span class="ruby-identifier">string</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-string">'ASCII-8BIT'</span>)
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">strscan</span>.<span class="ruby-identifier">string</span>[<span class="ruby-identifier">range</span>].<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">enc</span>)
+    <span class="ruby-keyword">ensure</span>
+      <span class="ruby-identifier">strscan</span>.<span class="ruby-identifier">string</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">enc</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-identifier">strscan</span>.<span class="ruby-identifier">string</span>[<span class="ruby-identifier">range</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-parse" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">parse</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Parse the source string into an element tree.</p>
+
+<p>The parsing code should parse the source provided in @source and build an
+element tree the root of which should be @root.</p>
+
+<p>This is the only method that has to be implemented by sub-classes!</p>
+          
+          
+
+          
+          <div class="method-source-code" id="parse-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/parser/base.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-warning" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">warning</span><span
+            class="method-args">(text)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Add the given warning <code>text</code> to the warning array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="warning-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/parser/base.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">warning</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-ivar">@warnings</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">text</span>
+  <span class="ruby-comment">#TODO: add position information</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Kramdown::Converter::RemoveHtmlTags - kramdown-1.3.3 Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Base.html">Kramdown::Converter::Base</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-convert">#convert</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Kramdown::Converter::RemoveHtmlTags">
+  <h1 id="class-Kramdown::Converter::RemoveHtmlTags" class="class">
+    class Kramdown::Converter::RemoveHtmlTags
+  </h1>
+
+  <section class="description">
+    
+<p>Removes all block (and optionally span) level HTML tags from the element
+tree.</p>
+
+<p>This converter can be used on parsed HTML documents to get an element tree
+that will only contain native kramdown elements.</p>
+
+<p><strong>Note</strong> that the returned element tree may not be fully
+conformant (i.e. the content models of *some elements may be violated)!</p>
+
+<p>This converter modifies the given tree in-place and returns it.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(root, options)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              
+            </div>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/remove_html_tags.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@options</span>[<span class="ruby-value">:template</span>] = <span class="ruby-string">''</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-convert" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert</span><span
+            class="method-args">(el)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="convert-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/remove_html_tags.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert</span>(<span class="ruby-identifier">el</span>)
+  <span class="ruby-identifier">children</span> = <span class="ruby-identifier">el</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">index</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">children</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-keyword">if</span> [<span class="ruby-value">:xml_pi</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">children</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">type</span>) <span class="ruby-operator">||</span>
+        (<span class="ruby-identifier">children</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:html_element</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-node">%w[style script]</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">children</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">value</span>))
+      <span class="ruby-identifier">children</span>[<span class="ruby-identifier">index</span><span class="ruby-operator">..</span><span class="ruby-identifier">index</span>] = []
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">children</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:html_element</span> <span class="ruby-operator">&amp;&amp;</span>
+      ((<span class="ruby-ivar">@options</span>[<span class="ruby-value">:remove_block_html_tags</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">children</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">options</span>[<span class="ruby-value">:category</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:block</span>) <span class="ruby-operator">||</span>
+       (<span class="ruby-ivar">@options</span>[<span class="ruby-value">:remove_span_html_tags</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">children</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">options</span>[<span class="ruby-value">:category</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:span</span>))
+      <span class="ruby-identifier">children</span>[<span class="ruby-identifier">index</span><span class="ruby-operator">..</span><span class="ruby-identifier">index</span>] = <span class="ruby-identifier">children</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">children</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">convert</span>(<span class="ruby-identifier">children</span>[<span class="ruby-identifier">index</span>])
+      <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">el</span>.<span class="ruby-identifier">children</span> = <span class="ruby-identifier">children</span>
+  <span class="ruby-identifier">el</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

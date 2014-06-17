@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Table of Contents - kramdown-1.3.3 Documentation</title>
+
+<link href="./fonts.css" rel="stylesheet">
+<link href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/search_index.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/searcher.js"></script>
+<script src="./js/darkfish.js"></script>
+
+
+<body id="top" class="table-of-contents">
+<main role="main">
+<h1 class="class">Table of Contents - kramdown-1.3.3 Documentation</h1>
+
+
+<h2 id="classes">Classes and Modules</h2>
+<ul>
+  <li class="module">
+    <a href="Kramdown.html">Kramdown</a>
+  </li>
+  <li class="module">
+    <a href="Kramdown/Converter.html">Kramdown::Converter</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Converter/Base.html">Kramdown::Converter::Base</a>
+
+    <ul>
+      <li><a href="Kramdown/Converter/Base.html#label-Base+class+for+converters">Base class for converters</a>
+      <li><a href="Kramdown/Converter/Base.html#label-Implementing+a+converter">Implementing a converter</a>
+    </ul>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Converter/Html.html">Kramdown::Converter::Html</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Converter/Kramdown.html">Kramdown::Converter::Kramdown</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Converter/Latex.html">Kramdown::Converter::Latex</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Converter/Pdf.html">Kramdown::Converter::Pdf</a>
+
+    <ul>
+      <li><a href="Kramdown/Converter/Pdf.html#5Buntitled-5D">Top Section</a>
+      <li><a href="Kramdown/Converter/Pdf.html#Element+rendering+methods">Element rendering methods</a>
+      <li><a href="Kramdown/Converter/Pdf.html#Helper+methods">Helper methods</a>
+      <li><a href="Kramdown/Converter/Pdf.html#Organizational+methods">Organizational methods</a>
+    </ul>
+  </li>
+  <li class="module">
+    <a href="Kramdown/Converter/Pdf/PrawnDocumentExtension.html">Kramdown::Converter::Pdf::PrawnDocumentExtension</a>
+  </li>
+  <li class="module">
+    <a href="Kramdown/Converter/Pdf/PrawnDocumentExtension/CustomBox.html">Kramdown::Converter::Pdf::PrawnDocumentExtension::CustomBox</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Converter/RemoveHtmlTags.html">Kramdown::Converter::RemoveHtmlTags</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Converter/Toc.html">Kramdown::Converter::Toc</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Document.html">Kramdown::Document</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Element.html">Kramdown::Element</a>
+
+    <ul>
+      <li><a href="Kramdown/Element.html#label-Structural+Elements">Structural Elements</a>
+      <li><a href="Kramdown/Element.html#label-%3Aroot">:root</a>
+      <li><a href="Kramdown/Element.html#label-%3Ablank">:blank</a>
+      <li><a href="Kramdown/Element.html#label-%3Ap">:p</a>
+      <li><a href="Kramdown/Element.html#label-%3Aheader">:header</a>
+      <li><a href="Kramdown/Element.html#label-%3Ablockquote">:blockquote</a>
+      <li><a href="Kramdown/Element.html#label-%3Acodeblock">:codeblock</a>
+      <li><a href="Kramdown/Element.html#label-%3Aul">:ul</a>
+      <li><a href="Kramdown/Element.html#label-%3Aol">:ol</a>
+      <li><a href="Kramdown/Element.html#label-%3Ali">:li</a>
+      <li><a href="Kramdown/Element.html#label-%3Adl">:dl</a>
+      <li><a href="Kramdown/Element.html#label-%3Adt">:dt</a>
+      <li><a href="Kramdown/Element.html#label-%3Add">:dd</a>
+      <li><a href="Kramdown/Element.html#label-%3Ahr">:hr</a>
+      <li><a href="Kramdown/Element.html#label-%3Atable">:table</a>
+      <li><a href="Kramdown/Element.html#label-%3Athead">:thead</a>
+      <li><a href="Kramdown/Element.html#label-%3Atbody">:tbody</a>
+      <li><a href="Kramdown/Element.html#label-%3Atfoot">:tfoot</a>
+      <li><a href="Kramdown/Element.html#label-%3Atr">:tr</a>
+      <li><a href="Kramdown/Element.html#label-%3Atd">:td</a>
+      <li><a href="Kramdown/Element.html#label-%3Amath">:math</a>
+      <li><a href="Kramdown/Element.html#label-Text+Markup+Elements">Text Markup Elements</a>
+      <li><a href="Kramdown/Element.html#label-%3Atext">:text</a>
+      <li><a href="Kramdown/Element.html#label-%3Abr">:br</a>
+      <li><a href="Kramdown/Element.html#label-%3Aa">:a</a>
+      <li><a href="Kramdown/Element.html#label-%3Aimg">:img</a>
+      <li><a href="Kramdown/Element.html#label-%3Acodespan">:codespan</a>
+      <li><a href="Kramdown/Element.html#label-%3Afootnote">:footnote</a>
+      <li><a href="Kramdown/Element.html#label-%3Aem">:em</a>
+      <li><a href="Kramdown/Element.html#label-%3Astrong">:strong</a>
+      <li><a href="Kramdown/Element.html#label-%3Aentity">:entity</a>
+      <li><a href="Kramdown/Element.html#label-%3Atypographic_sym">:typographic_sym</a>
+      <li><a href="Kramdown/Element.html#label-%3Asmart_quote">:smart_quote</a>
+      <li><a href="Kramdown/Element.html#label-%3Aabbreviation">:abbreviation</a>
+      <li><a href="Kramdown/Element.html#label-Other+Elements">Other Elements</a>
+      <li><a href="Kramdown/Element.html#label-%3Ahtml_element">:html_element</a>
+      <li><a href="Kramdown/Element.html#label-%3Axml_comment">:xml_comment</a>
+      <li><a href="Kramdown/Element.html#label-%3Axml_pi">:xml_pi</a>
+      <li><a href="Kramdown/Element.html#label-%3Acomment">:comment</a>
+      <li><a href="Kramdown/Element.html#label-%3Araw">:raw</a>
+    </ul>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Error.html">Kramdown::Error</a>
+  </li>
+  <li class="module">
+    <a href="Kramdown/Options.html">Kramdown::Options</a>
+
+    <ul>
+      <li><a href="Kramdown/Options.html#Option+Validators">Option Validators</a>
+      <li><a href="Kramdown/Options.html#Option+definitions">Option definitions</a>
+    </ul>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Options/Boolean.html">Kramdown::Options::Boolean</a>
+  </li>
+  <li class="module">
+    <a href="Kramdown/Parser.html">Kramdown::Parser</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Parser/Base.html">Kramdown::Parser::Base</a>
+
+    <ul>
+      <li><a href="Kramdown/Parser/Base.html#label-Base+class+for+parsers">Base class for parsers</a>
+      <li><a href="Kramdown/Parser/Base.html#label-Implementing+a+parser">Implementing a parser</a>
+    </ul>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Parser/GFM.html">Kramdown::Parser::GFM</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Parser/Html.html">Kramdown::Parser::Html</a>
+  </li>
+  <li class="module">
+    <a href="Kramdown/Parser/Html/Constants.html">Kramdown::Parser::Html::Constants</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Parser/Html/ElementConverter.html">Kramdown::Parser::Html::ElementConverter</a>
+  </li>
+  <li class="module">
+    <a href="Kramdown/Parser/Html/Parser.html">Kramdown::Parser::Html::Parser</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Parser/Kramdown.html">Kramdown::Parser::Kramdown</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Parser/Markdown.html">Kramdown::Parser::Markdown</a>
+  </li>
+  <li class="module">
+    <a href="Kramdown/Utils.html">Kramdown::Utils</a>
+
+    <ul>
+      <li><a href="Kramdown/Utils.html#label-Utils+Module">Utils Module</a>
+    </ul>
+  </li>
+  <li class="module">
+    <a href="Kramdown/Utils/Entities.html">Kramdown::Utils::Entities</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Utils/Entities/Entity.html">Kramdown::Utils::Entities::Entity</a>
+  </li>
+  <li class="module">
+    <a href="Kramdown/Utils/Html.html">Kramdown::Utils::Html</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Utils/OrderedHash.html">Kramdown::Utils::OrderedHash</a>
+  </li>
+  <li class="class">
+    <a href="Kramdown/Utils/StringScanner.html">Kramdown::Utils::StringScanner</a>
+  </li>
+  <li class="module">
+    <a href="Kramdown/Utils/Unidecoder.html">Kramdown::Utils::Unidecoder</a>
+  </li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+<ul>
+
+  <li class="method">
+    <a href="Kramdown/Options/Boolean.html#method-c-3D-3D-3D">::===</a>
+    &mdash;
+    <span class="container">Kramdown::Options::Boolean</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils.html#method-c-camelize">::camelize</a>
+    &mdash;
+    <span class="container">Kramdown::Utils</span>
+
+  <li class="method">
+    <a href="Kramdown/Element.html#method-c-category">::category</a>
+    &mdash;
+    <span class="container">Kramdown::Element</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-c-convert">::convert</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown.html#method-c-data_dir">::data_dir</a>
+    &mdash;
+    <span class="container">Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/Unidecoder.html#method-c-decode">::decode</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::Unidecoder</span>
+
+  <li class="method">
+    <a href="Kramdown/Options.html#method-c-defaults">::defaults</a>
+    &mdash;
+    <span class="container">Kramdown::Options</span>
+
+  <li class="method">
+    <a href="Kramdown/Options.html#method-c-define">::define</a>
+    &mdash;
+    <span class="container">Kramdown::Options</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-c-define_parser">::define_parser</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Options.html#method-c-defined-3F">::defined?</a>
+    &mdash;
+    <span class="container">Kramdown::Options</span>
+
+  <li class="method">
+    <a href="Kramdown/Options.html#method-c-definitions">::definitions</a>
+    &mdash;
+    <span class="container">Kramdown::Options</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/Entities.html#method-c-entity">::entity</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::Entities</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-c-get_template">::get_template</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-c-has_parser-3F">::has_parser?</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Options.html#method-c-merge">::merge</a>
+    &mdash;
+    <span class="container">Kramdown::Options</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/OrderedHash.html#method-c-new">::new</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::OrderedHash</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/StringScanner.html#method-c-new">::new</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::StringScanner</span>
+
+  <li class="method">
+    <a href="Kramdown/Document.html#method-c-new">::new</a>
+    &mdash;
+    <span class="container">Kramdown::Document</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Toc.html#method-c-new">::new</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Toc</span>
+
+  <li class="method">
+    <a href="Kramdown/Element.html#method-c-new">::new</a>
+    &mdash;
+    <span class="container">Kramdown::Element</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-c-new">::new</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/RemoveHtmlTags.html#method-c-new">::new</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::RemoveHtmlTags</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/GFM.html#method-c-new">::new</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::GFM</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-c-new">::new</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-c-new">::new</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Options.html#method-c-parse">::parse</a>
+    &mdash;
+    <span class="container">Kramdown::Options</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Base.html#method-c-parse">::parse</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-c-parser">::parser</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Options.html#method-c-simple_array_validator">::simple_array_validator</a>
+    &mdash;
+    <span class="container">Kramdown::Options</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils.html#method-c-snake_case">::snake_case</a>
+    &mdash;
+    <span class="container">Kramdown::Utils</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/OrderedHash.html#method-i-5B-5D">#[]</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::OrderedHash</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/OrderedHash.html#method-i-5B-5D-3D">#[]=</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::OrderedHash</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-a_options">#a_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-abbreviation_options">#abbreviation_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Base.html#method-i-adapt_source">#adapt_source</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/GFM.html#method-i-add_hard_line_breaks">#add_hard_line_breaks</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::GFM</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-add_link">#add_link</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Base.html#method-i-add_text">#add_text</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-after_block_boundary-3F">#after_block_boundary?</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-apply_template_after-3F">#apply_template_after?</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-i-apply_template_after-3F">#apply_template_after?</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-apply_template_before-3F">#apply_template_before?</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-i-apply_template_before-3F">#apply_template_before?</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Element.html#method-i-attr">#attr</a>
+    &mdash;
+    <span class="container">Kramdown::Element</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-attribute_list">#attribute_list</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf/PrawnDocumentExtension/CustomBox.html#method-i-available_width">#available_width</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf::PrawnDocumentExtension::CustomBox</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-before_block_boundary-3F">#before_block_boundary?</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/StringScanner.html#method-i-best_pos">#best_pos</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::StringScanner</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-block_hash">#block_hash</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-blockquote_options">#blockquote_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-br_options">#br_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/Entities/Entity.html#method-i-char">#char</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::Entities::Entity</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-codeblock_options">#codeblock_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-codespan_options">#codespan_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-configure_parser">#configure_parser</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/RemoveHtmlTags.html#method-i-convert">#convert</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::RemoveHtmlTags</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert">#convert</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-convert">#convert</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Toc.html#method-i-convert">#convert</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Toc</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-i-convert">#convert</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert">#convert</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_a">#convert_a</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_a">#convert_a</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_abbreviation">#convert_abbreviation</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_abbreviation">#convert_abbreviation</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_blank">#convert_blank</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_blank">#convert_blank</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_blockquote">#convert_blockquote</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_blockquote">#convert_blockquote</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_br">#convert_br</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_br">#convert_br</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_codeblock">#convert_codeblock</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_codeblock">#convert_codeblock</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_codespan">#convert_codespan</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_codespan">#convert_codespan</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_comment">#convert_comment</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_comment">#convert_comment</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_dd">#convert_dd</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_dd">#convert_dd</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_dl">#convert_dl</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_dl">#convert_dl</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_dt">#convert_dt</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_dt">#convert_dt</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_em">#convert_em</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_em">#convert_em</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_entity">#convert_entity</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_entity">#convert_entity</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_footnote">#convert_footnote</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_footnote">#convert_footnote</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_header">#convert_header</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_header">#convert_header</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_hr">#convert_hr</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_hr">#convert_hr</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_html_element">#convert_html_element</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_html_element">#convert_html_element</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_img">#convert_img</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_img">#convert_img</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_li">#convert_li</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_li">#convert_li</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_math">#convert_math</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_math">#convert_math</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_ol">#convert_ol</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_ol">#convert_ol</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_p">#convert_p</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_p">#convert_p</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_raw">#convert_raw</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_raw">#convert_raw</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_root">#convert_root</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_root">#convert_root</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_smart_quote">#convert_smart_quote</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_smart_quote">#convert_smart_quote</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_standalone_image">#convert_standalone_image</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_strong">#convert_strong</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_strong">#convert_strong</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_table">#convert_table</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_table">#convert_table</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_tbody">#convert_tbody</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_tbody">#convert_tbody</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_td">#convert_td</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_td">#convert_td</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_text">#convert_text</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_text">#convert_text</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_tfoot">#convert_tfoot</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_tfoot">#convert_tfoot</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_thead">#convert_thead</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_thead">#convert_thead</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_tr">#convert_tr</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_tr">#convert_tr</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_typographic_sym">#convert_typographic_sym</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_typographic_sym">#convert_typographic_sym</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_ul">#convert_ul</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_ul">#convert_ul</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_xml_comment">#convert_xml_comment</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_xml_comment">#convert_xml_comment</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-convert_xml_pi">#convert_xml_pi</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-convert_xml_pi">#convert_xml_pi</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-create_outline">#create_outline</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/StringScanner.html#method-i-current_line_number">#current_line_number</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::StringScanner</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-dd_options">#dd_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/OrderedHash.html#method-i-delete">#delete</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::OrderedHash</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-dl_options">#dl_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-document_options">#document_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-dt_options">#dt_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/OrderedHash.html#method-i-each">#each</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::OrderedHash</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-em_options">#em_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf/PrawnDocumentExtension.html#method-i-embed_image">#embed_image</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf::PrawnDocumentExtension</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-entity_options">#entity_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-entity_to_latex">#entity_to_latex</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/Html.html#method-i-entity_to_str">#entity_to_str</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-escape">#escape</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/Html.html#method-i-escape_html">#escape_html</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-i-extract_code_language">#extract_code_language</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-i-extract_code_language-21">#extract_code_language!</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Base.html#method-i-extract_string">#extract_string</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-finish_document">#finish_document</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-footnote_content">#footnote_content</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-format_as_block_html">#format_as_block_html</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-format_as_indented_block_html">#format_as_indented_block_html</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-format_as_span_html">#format_as_span_html</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-i-generate_id">#generate_id</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-generate_toc_tree">#generate_toc_tree</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-handle_extension">#handle_extension</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Html/Parser.html#method-i-handle_html_start_tag">#handle_html_start_tag</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Html::Parser</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-handle_kramdown_html_tag">#handle_kramdown_html_tag</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Html/Parser.html#method-i-handle_raw_html_tag">#handle_raw_html_tag</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Html::Parser</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/OrderedHash.html#method-i-has_key-3F">#has_key?</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::OrderedHash</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-header_options">#header_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-hr_options">#hr_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/Html.html#method-i-html_attributes">#html_attributes</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf/PrawnDocumentExtension.html#method-i-image_floats">#image_floats</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf::PrawnDocumentExtension</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-img_options">#img_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-i-in_toc-3F">#in_toc?</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-inner">#inner</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-inner">#inner</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-inner">#inner</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-latex_environment">#latex_environment</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-latex_link_target">#latex_link_target</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-li_options">#li_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-math_options">#math_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Utils/OrderedHash.html#method-i-merge-21">#merge!</a>
+    &mdash;
+    <span class="container">Kramdown::Utils::OrderedHash</span>
+
+  <li class="method">
+    <a href="Kramdown/Document.html#method-i-method_missing">#method_missing</a>
+    &mdash;
+    <span class="container">Kramdown::Document</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-new_block_el">#new_block_el</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Latex.html#method-i-normalize_abbreviation_key">#normalize_abbreviation_key</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Latex</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-normalize_link_id">#normalize_link_id</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-obfuscate">#obfuscate</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-ol_options">#ol_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Element.html#method-i-options">#options</a>
+    &mdash;
+    <span class="container">Kramdown::Element</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-i-output_header_level">#output_header_level</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-p_options">#p_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/GFM.html#method-i-parse">#parse</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::GFM</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Html.html#method-i-parse">#parse</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Base.html#method-i-parse">#parse</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse">#parse</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_abbrev_definition">#parse_abbrev_definition</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_attribute_list">#parse_attribute_list</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_atx_header">#parse_atx_header</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_autolink">#parse_autolink</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_blank_line">#parse_blank_line</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_block_extensions">#parse_block_extensions</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_block_html">#parse_block_html</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_block_math">#parse_block_math</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_blockquote">#parse_blockquote</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_blocks">#parse_blocks</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_codeblock">#parse_codeblock</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_codeblock_fenced">#parse_codeblock_fenced</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_codespan">#parse_codespan</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_definition_list">#parse_definition_list</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_emphasis">#parse_emphasis</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_eob_marker">#parse_eob_marker</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_escaped_chars">#parse_escaped_chars</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_extension_start_tag">#parse_extension_start_tag</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_first_list_line">#parse_first_list_line</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_footnote_definition">#parse_footnote_definition</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_footnote_marker">#parse_footnote_marker</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_horizontal_rule">#parse_horizontal_rule</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_html_entity">#parse_html_entity</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_inline_math">#parse_inline_math</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_line_break">#parse_line_break</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_link">#parse_link</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_link_definition">#parse_link_definition</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_list">#parse_list</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_paragraph">#parse_paragraph</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Html/Parser.html#method-i-parse_raw_html">#parse_raw_html</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Html::Parser</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_setext_header">#parse_setext_header</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_smart_quotes">#parse_smart_quotes</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_span_extensions">#parse_span_extensions</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_span_html">#parse_span_html</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_spans">#parse_spans</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_table">#parse_table</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-parse_typographic_syms">#parse_typographic_syms</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Html.html#method-i-remove_footnotes">#remove_footnotes</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Html</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_a">#render_a</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_abbreviation">#render_abbreviation</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_blockquote">#render_blockquote</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_br">#render_br</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_codeblock">#render_codeblock</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_codespan">#render_codespan</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_dd">#render_dd</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_dl">#render_dl</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_dt">#render_dt</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_em">#render_em</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_entity">#render_entity</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_header">#render_header</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_hr">#render_hr</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_li">#render_li</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_math">#render_math</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_ol">#render_ol</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_p">#render_p</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_padded_and_formatted_text">#render_padded_and_formatted_text</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_root">#render_root</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_smart_quote">#render_smart_quote</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_standalone_image">#render_standalone_image</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_strong">#render_strong</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_table">#render_table</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_text">#render_text</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_typographic_sym">#render_typographic_sym</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-render_ul">#render_ul</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-replace_abbreviations">#replace_abbreviations</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-reset_env">#reset_env</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-restore_env">#restore_env</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-root_options">#root_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-save_env">#save_env</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-setup_document">#setup_document</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-i-smart_quote_entity">#smart_quote_entity</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-smart_quote_options">#smart_quote_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-span_parser_regexps">#span_parser_regexps</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-strong_options">#strong_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-table_options">#table_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-text_hash">#text_hash</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-text_options">#text_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Document.html#method-i-try_require">#try_require</a>
+    &mdash;
+    <span class="container">Kramdown::Document</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-typographic_sym_options">#typographic_sym_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-ul_options">#ul_options</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-update_attr_with_ial">#update_attr_with_ial</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-update_ial_with_ial">#update_ial_with_ial</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-update_link_definitions">#update_link_definitions</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-update_raw_header_text">#update_raw_header_text</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Kramdown.html#method-i-update_tree">#update_tree</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Kramdown</span>
+
+  <li class="method">
+    <a href="Kramdown/Parser/Base.html#method-i-warning">#warning</a>
+    &mdash;
+    <span class="container">Kramdown::Parser::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Base.html#method-i-warning">#warning</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Base</span>
+
+  <li class="method">
+    <a href="Kramdown/Converter/Pdf.html#method-i-with_block_padding">#with_block_padding</a>
+    &mdash;
+    <span class="container">Kramdown::Converter::Pdf</span>
+</ul>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

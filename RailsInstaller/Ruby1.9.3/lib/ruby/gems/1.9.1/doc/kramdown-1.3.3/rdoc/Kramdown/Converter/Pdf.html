@@ -1,0 +1,2691 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Kramdown::Converter::Pdf - kramdown-1.3.3 Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    <div id="sections-section" class="nav-section">
+  <h3>Sections</h3>
+
+  <ul class="link-list" role="directory">
+    
+      <li><a href="#5Buntitled-5D"></a></li>
+    
+      <li><a href="#Element+rendering+methods">Element rendering methods</a></li>
+    
+      <li><a href="#Helper+methods">Helper methods</a></li>
+    
+      <li><a href="#Organizational+methods">Organizational methods</a></li>
+    
+  </ul>
+</div>
+
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Base.html">Kramdown::Converter::Base</a>
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Prawn::Measurements</span>
+  
+  
+  </ul>
+</div>
+
+    <div id="extends-section" class="nav-section">
+  <h3>Extended With Modules</h3>
+
+  <ul class="link-list">
+    
+  
+    <li><a class="extend" href="Pdf/PrawnDocumentExtension.html">Kramdown::Converter::Pdf::PrawnDocumentExtension</a>
+  
+  
+  </ul>
+</div>
+
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-a_options">#a_options</a>
+    
+    <li ><a href="#method-i-abbreviation_options">#abbreviation_options</a>
+    
+    <li ><a href="#method-i-apply_template_after-3F">#apply_template_after?</a>
+    
+    <li ><a href="#method-i-apply_template_before-3F">#apply_template_before?</a>
+    
+    <li ><a href="#method-i-block_hash">#block_hash</a>
+    
+    <li ><a href="#method-i-blockquote_options">#blockquote_options</a>
+    
+    <li ><a href="#method-i-br_options">#br_options</a>
+    
+    <li ><a href="#method-i-codeblock_options">#codeblock_options</a>
+    
+    <li ><a href="#method-i-codespan_options">#codespan_options</a>
+    
+    <li ><a href="#method-i-convert">#convert</a>
+    
+    <li ><a href="#method-i-create_outline">#create_outline</a>
+    
+    <li ><a href="#method-i-dd_options">#dd_options</a>
+    
+    <li ><a href="#method-i-dl_options">#dl_options</a>
+    
+    <li ><a href="#method-i-document_options">#document_options</a>
+    
+    <li ><a href="#method-i-dt_options">#dt_options</a>
+    
+    <li ><a href="#method-i-em_options">#em_options</a>
+    
+    <li ><a href="#method-i-entity_options">#entity_options</a>
+    
+    <li ><a href="#method-i-finish_document">#finish_document</a>
+    
+    <li ><a href="#method-i-header_options">#header_options</a>
+    
+    <li ><a href="#method-i-hr_options">#hr_options</a>
+    
+    <li ><a href="#method-i-img_options">#img_options</a>
+    
+    <li ><a href="#method-i-inner">#inner</a>
+    
+    <li ><a href="#method-i-li_options">#li_options</a>
+    
+    <li ><a href="#method-i-math_options">#math_options</a>
+    
+    <li ><a href="#method-i-ol_options">#ol_options</a>
+    
+    <li ><a href="#method-i-p_options">#p_options</a>
+    
+    <li ><a href="#method-i-render_a">#render_a</a>
+    
+    <li ><a href="#method-i-render_abbreviation">#render_abbreviation</a>
+    
+    <li ><a href="#method-i-render_blockquote">#render_blockquote</a>
+    
+    <li ><a href="#method-i-render_br">#render_br</a>
+    
+    <li ><a href="#method-i-render_codeblock">#render_codeblock</a>
+    
+    <li ><a href="#method-i-render_codespan">#render_codespan</a>
+    
+    <li ><a href="#method-i-render_dd">#render_dd</a>
+    
+    <li ><a href="#method-i-render_dl">#render_dl</a>
+    
+    <li ><a href="#method-i-render_dt">#render_dt</a>
+    
+    <li ><a href="#method-i-render_em">#render_em</a>
+    
+    <li ><a href="#method-i-render_entity">#render_entity</a>
+    
+    <li ><a href="#method-i-render_header">#render_header</a>
+    
+    <li ><a href="#method-i-render_hr">#render_hr</a>
+    
+    <li ><a href="#method-i-render_li">#render_li</a>
+    
+    <li ><a href="#method-i-render_math">#render_math</a>
+    
+    <li ><a href="#method-i-render_ol">#render_ol</a>
+    
+    <li ><a href="#method-i-render_p">#render_p</a>
+    
+    <li ><a href="#method-i-render_padded_and_formatted_text">#render_padded_and_formatted_text</a>
+    
+    <li ><a href="#method-i-render_root">#render_root</a>
+    
+    <li ><a href="#method-i-render_smart_quote">#render_smart_quote</a>
+    
+    <li ><a href="#method-i-render_standalone_image">#render_standalone_image</a>
+    
+    <li ><a href="#method-i-render_strong">#render_strong</a>
+    
+    <li ><a href="#method-i-render_table">#render_table</a>
+    
+    <li ><a href="#method-i-render_text">#render_text</a>
+    
+    <li ><a href="#method-i-render_typographic_sym">#render_typographic_sym</a>
+    
+    <li ><a href="#method-i-render_ul">#render_ul</a>
+    
+    <li ><a href="#method-i-root_options">#root_options</a>
+    
+    <li ><a href="#method-i-setup_document">#setup_document</a>
+    
+    <li ><a href="#method-i-smart_quote_options">#smart_quote_options</a>
+    
+    <li ><a href="#method-i-strong_options">#strong_options</a>
+    
+    <li ><a href="#method-i-table_options">#table_options</a>
+    
+    <li ><a href="#method-i-text_hash">#text_hash</a>
+    
+    <li ><a href="#method-i-text_options">#text_options</a>
+    
+    <li ><a href="#method-i-typographic_sym_options">#typographic_sym_options</a>
+    
+    <li ><a href="#method-i-ul_options">#ul_options</a>
+    
+    <li ><a href="#method-i-with_block_padding">#with_block_padding</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Kramdown::Converter::Pdf">
+  <h1 id="class-Kramdown::Converter::Pdf" class="class">
+    class Kramdown::Converter::Pdf
+  </h1>
+
+  <section class="description">
+    
+<p>Converts an element tree to a PDF using the prawn PDF library.</p>
+
+<p>This basic version provides a nice starting point for customizations but
+can also be used directly.</p>
+
+<p>There can be the following two methods for each element type:
+render_TYPE(el, opts) and TYPE_options(el, opts) where <code>el</code> is a
+kramdown element and <code>opts</code> an hash with rendering options.</p>
+
+<p>The render_TYPE(el, opts) is used for rendering the specific element. If
+the element is a span element, it should return a hash or an array of
+hashes that can be used by the formatted_text method of Prawn::Document.
+This method can then be used in block elements to actually render the span
+elements.</p>
+
+<p>The rendering options are passed from the parent to its child elements.
+This allows one to define general options at the top of the tree (the root
+element) that can later be changed or amended.</p>
+
+<p>Currently supports the conversion of all elements except those of the
+following types:</p>
+
+<pre>:html_element, :img, :footnote</pre>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(root, options)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              
+            </div>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@stack</span> = []
+  <span class="ruby-ivar">@dests</span> = {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-apply_template_after-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">apply_template_after?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>false</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="apply_template_after-3F-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">apply_template_after?</span>
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-apply_template_before-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">apply_template_before?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>PDF templates are applied before conversion. They should contain code to
+augment the converter object (i.e. to override the methods).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="apply_template_before-3F-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">apply_template_before?</span>
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert</span><span
+            class="method-args">(el, opts = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Invoke the special rendering method for the given element <code>el</code>.</p>
+
+<p>A PDF destination is also added at the current location if th element has
+an ID or if the element is of type :header and the :auto_ids option is set.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span> = {})
+  <span class="ruby-identifier">id</span> = <span class="ruby-identifier">el</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'id'</span>]
+  <span class="ruby-identifier">id</span> = <span class="ruby-identifier">generate_id</span>(<span class="ruby-identifier">el</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:raw_text</span>]) <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">id</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:auto_ids</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:header</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@dests</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">id</span>)
+    <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">add_dest</span>(<span class="ruby-identifier">id</span>, <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">dest_xyz</span>(<span class="ruby-value">0</span>, <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">y</span>))
+    <span class="ruby-ivar">@dests</span>[<span class="ruby-identifier">id</span>] = <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">dest_xyz</span>(<span class="ruby-value">0</span>, <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">send</span>(<span class="ruby-constant">DISPATCHER_RENDER</span>[<span class="ruby-identifier">el</span>.<span class="ruby-identifier">type</span>], <span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="protected-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Protected Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-inner" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">inner</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Render the children of this element with the given options and return the
+results as array.</p>
+
+<p>Each time a child is rendered, the <code>TYPE_options</code> method is
+invoked (if it exists) to get the specific options for the element with
+which the given options are updated.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="inner-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inner</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">push</span>([<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>])
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">el</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">inner_el</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">dup</span>
+    <span class="ruby-identifier">options</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">send</span>(<span class="ruby-constant">DISPATCHER_OPTIONS</span>[<span class="ruby-identifier">inner_el</span>.<span class="ruby-identifier">type</span>], <span class="ruby-identifier">inner_el</span>, <span class="ruby-identifier">options</span>))
+    <span class="ruby-identifier">convert</span>(<span class="ruby-identifier">inner_el</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">end</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>
+  <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+
+  
+  
+  <section id="Element+rendering+methods" class="documentation-section">
+    
+    <header class="documentation-section-title">
+      <h2>
+        Element rendering methods
+      </h2>
+      <span class="section-click-top">
+        <a href="#top">&uarr; top</a>
+      </span>
+    </header>
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="protected-instance-Element+rendering+methods-method-details" class="method-section">
+       <header>
+         <h3>Protected Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-a_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">a_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="a_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 328</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">a_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">hash</span> = {<span class="ruby-value">:color</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'000088'</span>}
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'href'</span>].<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">'#'</span>)
+    <span class="ruby-identifier">hash</span>[<span class="ruby-value">:anchor</span>] = <span class="ruby-identifier">el</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'href'</span>].<span class="ruby-identifier">sub</span>(<span class="ruby-node">/\A#/</span>, <span class="ruby-string">''</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">hash</span>[<span class="ruby-value">:link</span>] = <span class="ruby-identifier">el</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'href'</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">hash</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-abbreviation_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">abbreviation_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="abbreviation_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 393</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">abbreviation_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-blockquote_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">blockquote_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="blockquote_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">blockquote_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {<span class="ruby-value">:styles</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:italic</span>]}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-br_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">br_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="br_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 352</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">br_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-codeblock_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">codeblock_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="codeblock_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">codeblock_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {
+    <span class="ruby-value">:font</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Courier'</span>, <span class="ruby-value">:color</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'880000'</span>,
+    <span class="ruby-value">:bottom_padding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:size</span>]
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-codespan_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">codespan_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="codespan_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 344</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">codespan_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {<span class="ruby-value">:font</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Courier'</span>, <span class="ruby-value">:color</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'880000'</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-dd_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dd_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="dd_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dd_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-dl_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dl_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="dl_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dl_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-dt_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dt_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="dt_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dt_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {<span class="ruby-value">:styles</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-identifier">opts</span>[<span class="ruby-value">:styles</span>] <span class="ruby-operator">||</span> []) <span class="ruby-operator">+</span> [<span class="ruby-value">:bold</span>], <span class="ruby-value">:bottom_padding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-em_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">em_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="em_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 316</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">em_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:styles</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:styles</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-value">:italic</span>)
+    {<span class="ruby-value">:styles</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:styles</span>].<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">==</span> <span class="ruby-value">:italic</span>}}
+  <span class="ruby-keyword">else</span>
+    {<span class="ruby-value">:styles</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-identifier">opts</span>[<span class="ruby-value">:styles</span>] <span class="ruby-operator">||</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">:italic</span>}
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-entity_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">entity_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="entity_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 385</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">entity_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-header_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">header_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="header_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">header_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">size</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:size</span>] <span class="ruby-operator">*</span> <span class="ruby-value">1.15</span><span class="ruby-operator">**</span>(<span class="ruby-value">6</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:level</span>])
+  {
+    <span class="ruby-value">:font</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Helvetica&quot;</span>, <span class="ruby-value">:styles</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-identifier">opts</span>[<span class="ruby-value">:styles</span>] <span class="ruby-operator">||</span> []) <span class="ruby-operator">+</span> [<span class="ruby-value">:bold</span>],
+    <span class="ruby-value">:size</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">size</span>, <span class="ruby-value">:bottom_padding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:size</span>], <span class="ruby-value">:top_padding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:size</span>]
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-hr_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">hr_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="hr_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 255</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hr_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {<span class="ruby-value">:top_padding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:size</span>], <span class="ruby-value">:bottom_padding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:size</span>]}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-img_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">img_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="img_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 401</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">img_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-li_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">li_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="li_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">li_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-math_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">math_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="math_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">math_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ol_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ol_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="ol_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ol_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {<span class="ruby-value">:bottom_padding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:size</span>]}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-p_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">p_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="p_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">p_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">bpad</span> = (<span class="ruby-identifier">el</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:transparent</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:leading</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:size</span>])
+  {<span class="ruby-value">:align</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:justify</span>, <span class="ruby-value">:bottom_padding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">bpad</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_a" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">render_a</span><span
+            class="method-args">(el, opts)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Pdf.html#method-i-render_em">render_em</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-render_abbreviation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_abbreviation</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_abbreviation-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 397</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_abbreviation</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">text_hash</span>(<span class="ruby-identifier">el</span>.<span class="ruby-identifier">value</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_blockquote" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_blockquote</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_blockquote-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_blockquote</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">indent</span>(<span class="ruby-identifier">mm2pt</span>(<span class="ruby-value">10</span>), <span class="ruby-identifier">mm2pt</span>(<span class="ruby-value">10</span>)) { <span class="ruby-identifier">inner</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>) }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_br" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_br</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_br-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 356</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_br</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">text_hash</span>(<span class="ruby-string">&quot;\n&quot;</span>, <span class="ruby-identifier">opts</span>, <span class="ruby-keyword">false</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_codeblock" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_codeblock</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_codeblock-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 272</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_codeblock</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">with_block_padding</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">formatted_text</span>([<span class="ruby-identifier">text_hash</span>(<span class="ruby-identifier">el</span>.<span class="ruby-identifier">value</span>, <span class="ruby-identifier">opts</span>, <span class="ruby-keyword">false</span>)], <span class="ruby-identifier">block_hash</span>(<span class="ruby-identifier">opts</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_codespan" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_codespan</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_codespan-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 348</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_codespan</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">text_hash</span>(<span class="ruby-identifier">el</span>.<span class="ruby-identifier">value</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_dd" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_dd</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_dd-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_dd</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">indent</span>(<span class="ruby-identifier">mm2pt</span>(<span class="ruby-value">10</span>)) { <span class="ruby-identifier">inner</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>) }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_dl" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_dl</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_dl-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 223</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_dl</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">inner</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_dt" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_dt</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_dt-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 231</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_dt</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">render_padded_and_formatted_text</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_em" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_em</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_em-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 338</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_em</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">inner</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Pdf.html#method-i-render_strong">render_strong</a>, <a href="Pdf.html#method-i-render_a">render_a</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_entity" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_entity</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_entity-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 389</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_entity</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">text_hash</span>(<span class="ruby-identifier">el</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">char</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_header" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_header</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_header-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_header</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">render_padded_and_formatted_text</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_hr" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_hr</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_hr-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_hr</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">with_block_padding</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">stroke_horizontal_line</span>(<span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">bounds</span>.<span class="ruby-identifier">left</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mm2pt</span>(<span class="ruby-value">5</span>), <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">bounds</span>.<span class="ruby-identifier">right</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">mm2pt</span>(<span class="ruby-value">5</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_li" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_li</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_li-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 215</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_li</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">inner</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_math" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_math</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_math-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_math</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:category</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:block</span>
+    <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">formatted_text</span>([{<span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">value</span>}], <span class="ruby-identifier">block_hash</span>(<span class="ruby-identifier">opts</span>))
+  <span class="ruby-keyword">else</span>
+    {<span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">value</span>}
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_ol" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_ol</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_ol-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 202</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_ol</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">with_block_padding</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">el</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">li</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">float</span> { <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">formatted_text</span>([<span class="ruby-identifier">text_hash</span>(<span class="ruby-node">&quot;#{index+1}.&quot;</span>, <span class="ruby-identifier">opts</span>)]) }
+      <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">indent</span>(<span class="ruby-identifier">mm2pt</span>(<span class="ruby-value">6</span>)) { <span class="ruby-identifier">convert</span>(<span class="ruby-identifier">li</span>, <span class="ruby-identifier">opts</span>) }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_p" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_p</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_p-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_p</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:img</span>
+    <span class="ruby-identifier">render_standalone_image</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render_padded_and_formatted_text</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_root" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_root</span><span
+            class="method-args">(root, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_root-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_root</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-ivar">@pdf</span> = <span class="ruby-identifier">setup_document</span>(<span class="ruby-identifier">root</span>)
+  <span class="ruby-identifier">inner</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">root_options</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">opts</span>))
+  <span class="ruby-identifier">create_outline</span>(<span class="ruby-identifier">root</span>)
+  <span class="ruby-identifier">finish_document</span>(<span class="ruby-identifier">root</span>)
+  <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">render</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_smart_quote" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_smart_quote</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_smart_quote-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 364</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_smart_quote</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">text_hash</span>(<span class="ruby-identifier">smart_quote_entity</span>(<span class="ruby-identifier">el</span>).<span class="ruby-identifier">char</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_standalone_image" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_standalone_image</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_standalone_image-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_standalone_image</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">img</span> = <span class="ruby-identifier">el</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">first</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">img</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'src'</span>].<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">warning</span>(<span class="ruby-string">&quot;Rendering an image without a source is not possible&quot;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">img</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'src'</span>] <span class="ruby-operator">!~</span> <span class="ruby-regexp">/\.jpe?g$|\.png$/</span>
+    <span class="ruby-identifier">warning</span>(<span class="ruby-node">&quot;Cannot render images other than JPEG or PNG, got #{img.attr['src']}&quot;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">img_dirs</span> = (<span class="ruby-ivar">@options</span>[<span class="ruby-value">:image_directories</span>] <span class="ruby-operator">||</span> [<span class="ruby-string">'.'</span>]).<span class="ruby-identifier">dup</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">img_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">img_dirs</span>.<span class="ruby-identifier">shift</span>, <span class="ruby-identifier">img</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'src'</span>])
+    <span class="ruby-identifier">image_obj</span>, <span class="ruby-identifier">image_info</span> = <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">build_image_object</span>(<span class="ruby-identifier">open</span>(<span class="ruby-identifier">img_path</span>))
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-identifier">img_dirs</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">raise</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">retry</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">options</span> = {<span class="ruby-value">:position</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:center</span>}
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">img</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'height'</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">img</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'height'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/px$/</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:height</span>] = <span class="ruby-identifier">img</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'height'</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">/</span> (<span class="ruby-ivar">@options</span>[<span class="ruby-value">:image_dpi</span>] <span class="ruby-operator">||</span> <span class="ruby-value">150.0</span>) <span class="ruby-operator">*</span> <span class="ruby-value">72</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">img</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'width'</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">img</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'width'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/px$/</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:width</span>] = <span class="ruby-identifier">img</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'width'</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">/</span> (<span class="ruby-ivar">@options</span>[<span class="ruby-value">:image_dpi</span>] <span class="ruby-operator">||</span> <span class="ruby-value">150.0</span>) <span class="ruby-operator">*</span> <span class="ruby-value">72</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:scale</span>] =[(<span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">bounds</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">mm2pt</span>(<span class="ruby-value">20</span>)) <span class="ruby-operator">/</span> <span class="ruby-identifier">image_info</span>.<span class="ruby-identifier">width</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-value">1</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">img</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-string">'class'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\bright\b/</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:position</span>] = <span class="ruby-value">:right</span>
+    <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">float</span> { <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">embed_image</span>(<span class="ruby-identifier">image_obj</span>, <span class="ruby-identifier">image_info</span>, <span class="ruby-identifier">options</span>) }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">with_block_padding</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">embed_image</span>(<span class="ruby-identifier">image_obj</span>, <span class="ruby-identifier">image_info</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_strong" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">render_strong</span><span
+            class="method-args">(el, opts)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Pdf.html#method-i-render_em">render_em</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-render_table" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_table</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_table-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 282</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_table</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">data</span> = []
+  <span class="ruby-identifier">el</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">container</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">container</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">data</span> <span class="ruby-operator">&lt;&lt;</span> []
+      <span class="ruby-identifier">row</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cell</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">cell</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:category</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:block</span>}
+          <span class="ruby-identifier">warning</span>(<span class="ruby-string">&quot;Can't render tables with cells containing block elements&quot;</span>)
+          <span class="ruby-keyword">return</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">cell_data</span> = <span class="ruby-identifier">inner</span>(<span class="ruby-identifier">cell</span>, <span class="ruby-identifier">opts</span>)
+        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">cell_data</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>[<span class="ruby-value">:text</span>]}.<span class="ruby-identifier">join</span>(<span class="ruby-string">''</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">with_block_padding</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">table</span>(<span class="ruby-identifier">data</span>, <span class="ruby-value">:width</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">bounds</span>.<span class="ruby-identifier">right</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">el</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:alignment</span>].<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">alignment</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">columns</span>(<span class="ruby-identifier">index</span>).<span class="ruby-identifier">align</span> = <span class="ruby-identifier">alignment</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">alignment</span> <span class="ruby-operator">==</span> <span class="ruby-value">:default</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_text" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_text</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_text-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 312</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_text</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">text_hash</span>(<span class="ruby-identifier">el</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_typographic_sym" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_typographic_sym</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_typographic_sym-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_typographic_sym</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">str</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-value">:laquo_space</span>
+          <span class="ruby-operator">::</span><span class="ruby-constant">Kramdown</span><span class="ruby-operator">::</span><span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">Entities</span>.<span class="ruby-identifier">entity</span>(<span class="ruby-string">'laquo'</span>).<span class="ruby-identifier">char</span> <span class="ruby-operator">+</span>
+            <span class="ruby-operator">::</span><span class="ruby-constant">Kramdown</span><span class="ruby-operator">::</span><span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">Entities</span>.<span class="ruby-identifier">entity</span>(<span class="ruby-string">'nbsp'</span>).<span class="ruby-identifier">char</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-value">:raquo_space</span>
+          <span class="ruby-operator">::</span><span class="ruby-constant">Kramdown</span><span class="ruby-operator">::</span><span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">Entities</span>.<span class="ruby-identifier">entity</span>(<span class="ruby-string">'raquo'</span>).<span class="ruby-identifier">char</span> <span class="ruby-operator">+</span>
+            <span class="ruby-operator">::</span><span class="ruby-constant">Kramdown</span><span class="ruby-operator">::</span><span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">Entities</span>.<span class="ruby-identifier">entity</span>(<span class="ruby-string">'nbsp'</span>).<span class="ruby-identifier">char</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-operator">::</span><span class="ruby-constant">Kramdown</span><span class="ruby-operator">::</span><span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">Entities</span>.<span class="ruby-identifier">entity</span>(<span class="ruby-identifier">el</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">char</span>
+        <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">text_hash</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_ul" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_ul</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_ul-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_ul</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">with_block_padding</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">el</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">li</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">float</span> { <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">formatted_text</span>([<span class="ruby-identifier">text_hash</span>(<span class="ruby-string">&quot;•&quot;</span>, <span class="ruby-identifier">opts</span>)]) }
+      <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">indent</span>(<span class="ruby-identifier">mm2pt</span>(<span class="ruby-value">6</span>)) { <span class="ruby-identifier">convert</span>(<span class="ruby-identifier">li</span>, <span class="ruby-identifier">opts</span>) }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-root_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">root_options</span><span
+            class="method-args">(root, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="root_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">root_options</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">opts</span>)
+  {<span class="ruby-value">:font</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Times-Roman'</span>, <span class="ruby-value">:size</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">12</span>, <span class="ruby-value">:leading</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-smart_quote_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">smart_quote_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="smart_quote_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 360</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">smart_quote_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-strong_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">strong_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="strong_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 324</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">strong_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {<span class="ruby-value">:styles</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-identifier">opts</span>[<span class="ruby-value">:styles</span>] <span class="ruby-operator">||</span> []) <span class="ruby-operator">+</span> [<span class="ruby-value">:bold</span>]}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-table_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">table_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="table_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">table_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {<span class="ruby-value">:bottom_padding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:size</span>]}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-text_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">text_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="text_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-typographic_sym_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">typographic_sym_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="typographic_sym_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 368</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">typographic_sym_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ul_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ul_options</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="ul_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ul_options</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  {<span class="ruby-value">:bottom_padding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:size</span>]}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+
+  
+  
+  <section id="Helper+methods" class="documentation-section">
+    
+    <header class="documentation-section-title">
+      <h2>
+        Helper methods
+      </h2>
+      <span class="section-click-top">
+        <a href="#top">&uarr; top</a>
+      </span>
+    </header>
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="protected-instance-Helper+methods-method-details" class="method-section">
+       <header>
+         <h3>Protected Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-block_hash" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">block_hash</span><span
+            class="method-args">(opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Helper function that returns a hash with valid options for the prawn
+text_box extracted from the given options.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="block_hash-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 606</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">block_hash</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">hash</span> = {}
+  [<span class="ruby-value">:align</span>, <span class="ruby-value">:valign</span>, <span class="ruby-value">:mode</span>, <span class="ruby-value">:final_gap</span>, <span class="ruby-value">:leading</span>, <span class="ruby-value">:fallback_fonts</span>,
+   <span class="ruby-value">:direction</span>, <span class="ruby-value">:indent_paragraphs</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">key</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">hash</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-render_padded_and_formatted_text" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_padded_and_formatted_text</span><span
+            class="method-args">(el, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Render the children of the given element as formatted text and respect the
+top/bottom padding (see <a
+href="Pdf.html#method-i-with_block_padding">with_block_padding</a>).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="render_padded_and_formatted_text-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 586</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_padded_and_formatted_text</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">with_block_padding</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>) { <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">formatted_text</span>(<span class="ruby-identifier">inner</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>), <span class="ruby-identifier">block_hash</span>(<span class="ruby-identifier">opts</span>)) }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-text_hash" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">text_hash</span><span
+            class="method-args">(text, opts, squeeze_whitespace = true)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Helper function that returns a hash with valid “formatted text” options.</p>
+
+<p>The <code>text</code> parameter is used as value for the :text key and if
+<code>squeeze_whitespace</code> is <code>true</code>, all whitespace is
+converted into spaces.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="text_hash-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 594</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_hash</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">opts</span>, <span class="ruby-identifier">squeeze_whitespace</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">text</span> = <span class="ruby-identifier">text</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\s+/</span>, <span class="ruby-string">' '</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">squeeze_whitespace</span>
+  <span class="ruby-identifier">hash</span> = {<span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">text</span>}
+  [<span class="ruby-value">:styles</span>, <span class="ruby-value">:size</span>, <span class="ruby-value">:character_spacing</span>, <span class="ruby-value">:font</span>, <span class="ruby-value">:color</span>, <span class="ruby-value">:link</span>,
+   <span class="ruby-value">:anchor</span>, <span class="ruby-value">:draw_text_callback</span>, <span class="ruby-value">:callback</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">key</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">hash</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-with_block_padding" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">with_block_padding</span><span
+            class="method-args">(el, opts) { || ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Move the prawn document cursor down before and/or after yielding the given
+block.</p>
+
+<p>The :top_padding and :bottom_padding options are used for determinig the
+padding amount.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="with_block_padding-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 578</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">with_block_padding</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">move_down</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-value">:top_padding</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:top_padding</span>)
+  <span class="ruby-keyword">yield</span>
+  <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">move_down</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-value">:bottom_padding</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:bottom_padding</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+
+  
+  
+  <section id="Organizational+methods" class="documentation-section">
+    
+    <header class="documentation-section-title">
+      <h2>
+        Organizational methods
+      </h2>
+      <span class="section-click-top">
+        <a href="#top">&uarr; top</a>
+      </span>
+    </header>
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="protected-instance-Organizational+methods-method-details" class="method-section">
+       <header>
+         <h3>Protected Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-create_outline" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_outline</span><span
+            class="method-args">(root)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Create the PDF outline from the header elements in the TOC.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="create_outline-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 540</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_outline</span>(<span class="ruby-identifier">root</span>)
+  <span class="ruby-identifier">toc</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Kramdown</span><span class="ruby-operator">::</span><span class="ruby-constant">Converter</span><span class="ruby-operator">::</span><span class="ruby-constant">Toc</span>.<span class="ruby-identifier">convert</span>(<span class="ruby-identifier">root</span>).<span class="ruby-identifier">first</span>
+
+  <span class="ruby-identifier">text_of_header</span> = <span class="ruby-identifier">lambda</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">el</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:text</span>
+      <span class="ruby-identifier">el</span>.<span class="ruby-identifier">value</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">el</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">text_of_header</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">c</span>)}.<span class="ruby-identifier">join</span>(<span class="ruby-string">''</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">add_section</span> = <span class="ruby-identifier">lambda</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span>, <span class="ruby-identifier">parent</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">text</span> = <span class="ruby-identifier">text_of_header</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">item</span>.<span class="ruby-identifier">value</span>)
+    <span class="ruby-identifier">destination</span> = <span class="ruby-ivar">@dests</span>[<span class="ruby-identifier">item</span>.<span class="ruby-identifier">attr</span>[<span class="ruby-value">:id</span>]]
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">parent</span>
+      <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">outline</span>.<span class="ruby-identifier">page</span>(<span class="ruby-value">:title</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">text</span>, <span class="ruby-value">:destination</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">destination</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">outline</span>.<span class="ruby-identifier">add_subsection_to</span>(<span class="ruby-identifier">parent</span>) <span class="ruby-keyword">do</span>
+        <span class="ruby-ivar">@pdf</span>.<span class="ruby-identifier">outline</span>.<span class="ruby-identifier">page</span>(<span class="ruby-value">:title</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">text</span>, <span class="ruby-value">:destination</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">destination</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">item</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">add_section</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">c</span>, <span class="ruby-identifier">text</span>)}
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">toc</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">add_section</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">item</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-document_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">document_options</span><span
+            class="method-args">(root)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return a hash with options that are suitable for Prawn::Document.new.</p>
+
+<p>Used in <a href="Pdf.html#method-i-setup_document">setup_document</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="document_options-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 509</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">document_options</span>(<span class="ruby-identifier">root</span>)
+  {
+    <span class="ruby-value">:page_size</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'A4'</span>, <span class="ruby-value">:page_layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:portrait</span>, <span class="ruby-value">:margin</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">mm2pt</span>(<span class="ruby-value">20</span>),
+    <span class="ruby-value">:info</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-value">:Creator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'kramdown PDF converter'</span>,
+      <span class="ruby-value">:CreationDate</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+    },
+    <span class="ruby-value">:compress</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:optimize_objects</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-finish_document" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">finish_document</span><span
+            class="method-args">(root)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Used in <a href="Pdf.html#method-i-render_root">render_root</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="finish_document-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 535</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">finish_document</span>(<span class="ruby-identifier">root</span>)
+  <span class="ruby-comment"># no op</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-setup_document" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup_document</span><span
+            class="method-args">(root)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Create a Prawn::Document object and return it.</p>
+
+<p>Can be used to define repeatable content or register fonts.</p>
+
+<p>Used in <a href="Pdf.html#method-i-render_root">render_root</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="setup_document-source">
+            <pre><span class="ruby-comment"># File lib/kramdown/converter/pdf.rb, line 525</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup_document</span>(<span class="ruby-identifier">root</span>)
+  <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Prawn</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">document_options</span>(<span class="ruby-identifier">root</span>))
+  <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">extend</span>(<span class="ruby-constant">PrawnDocumentExtension</span>)
+  <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">converter</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-identifier">doc</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

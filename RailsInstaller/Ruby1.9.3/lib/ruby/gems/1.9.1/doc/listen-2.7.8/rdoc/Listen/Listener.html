@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Listen::Listener - listen-2.7.8 Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Celluloid::FSM</span>
+  
+  
+  
+    <li><a class="include" href="QueueOptimizer.html">Listen::QueueOptimizer</a>
+  
+  
+  </ul>
+</div>
+
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-async">#async</a>
+    
+    <li ><a href="#method-i-ignore">#ignore</a>
+    
+    <li ><a href="#method-i-ignore-21">#ignore!</a>
+    
+    <li ><a href="#method-i-listen-3F">#listen?</a>
+    
+    <li ><a href="#method-i-only">#only</a>
+    
+    <li ><a href="#method-i-pause">#pause</a>
+    
+    <li ><a href="#method-i-paused">#paused</a>
+    
+    <li ><a href="#method-i-paused-3D">#paused=</a>
+    
+    <li ><a href="#method-i-paused-3F">#paused?</a>
+    
+    <li ><a href="#method-i-processing-3F">#processing?</a>
+    
+    <li ><a href="#method-i-queue">#queue</a>
+    
+    <li ><a href="#method-i-start">#start</a>
+    
+    <li ><a href="#method-i-stop">#stop</a>
+    
+    <li ><a href="#method-i-sync">#sync</a>
+    
+    <li ><a href="#method-i-unpause">#unpause</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Listen::Listener">
+  <h1 id="class-Listen::Listener" class="class">
+    class Listen::Listener
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-block" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">block</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-directories" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">directories</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>TODO: deprecate</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-host" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">host</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-options" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">options</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>TODO: deprecate</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-port" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">port</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-registry" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">registry</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-silencer" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">silencer</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-supervisor" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">supervisor</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(*args, &block)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Initializes the directories listener.</p>
+
+<p>@param [String] directory the directories to listen to @param [Hash]
+options the listen options (see Listen::Listener::Options)</p>
+
+<p>@yield [modified, added, removed] the changed files @yieldparam
+[Array&lt;String&gt;] modified the list of modified files @yieldparam
+[Array&lt;String&gt;] added the list of added files @yieldparam
+[Array&lt;String&gt;] removed the list of removed files</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">_init_options</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {})
+
+  <span class="ruby-comment"># Setup logging first</span>
+  <span class="ruby-constant">Celluloid</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">level</span> = <span class="ruby-identifier">_debug_level</span>
+  <span class="ruby-identifier">_log</span> <span class="ruby-value">:info</span>, <span class="ruby-node">&quot;Celluloid loglevel set to: #{Celluloid.logger.level}&quot;</span>
+
+  <span class="ruby-ivar">@silencer</span> = <span class="ruby-constant">Silencer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">_reconfigure_silencer</span>({})
+
+  <span class="ruby-ivar">@tcp_mode</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">if</span> [<span class="ruby-value">:recipient</span>, <span class="ruby-value">:broadcaster</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>]
+    <span class="ruby-identifier">target</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-ivar">@tcp_mode</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-identifier">_init_tcp_options</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@directories</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path</span>).<span class="ruby-identifier">realpath</span> }
+  <span class="ruby-ivar">@queue</span> = <span class="ruby-constant">Queue</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@block</span> = <span class="ruby-identifier">block</span>
+  <span class="ruby-ivar">@registry</span> = <span class="ruby-constant">Celluloid</span><span class="ruby-operator">::</span><span class="ruby-constant">Registry</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">transition</span> <span class="ruby-value">:stopped</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-async" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">async</span><span
+            class="method-args">(type)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="async-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">async</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-identifier">proxy</span> = <span class="ruby-identifier">sync</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-identifier">proxy</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">async</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ignore" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ignore</span><span
+            class="method-args">(regexps)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Add files and dirs to ignore on top of defaults</p>
+
+<p>(@see <a href="Silencer.html">Listen::Silencer</a> for default ignored
+files and dirs)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ignore-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ignore</span>(<span class="ruby-identifier">regexps</span>)
+  <span class="ruby-identifier">_reconfigure_silencer</span>(<span class="ruby-identifier">ignore</span><span class="ruby-operator">:</span> [<span class="ruby-identifier">options</span>[<span class="ruby-value">:ignore</span>], <span class="ruby-identifier">regexps</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ignore-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ignore!</span><span
+            class="method-args">(regexps)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Replace default ignore patterns with provided regexp</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ignore-21-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ignore!</span>(<span class="ruby-identifier">regexps</span>)
+  <span class="ruby-identifier">_reconfigure_silencer</span>(<span class="ruby-identifier">ignore</span><span class="ruby-operator">:</span> [], <span class="ruby-identifier">ignore!</span><span class="ruby-operator">:</span> <span class="ruby-identifier">regexps</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-listen-3F" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">listen?</span><span
+            class="method-args">()</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>TODO: deprecate</p>
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Listener.html#method-i-processing-3F">processing?</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-only" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">only</span><span
+            class="method-args">(regexps)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="../Listen.html">Listen</a> only to files and dirs matching regexp</p>
+          
+          
+
+          
+          <div class="method-source-code" id="only-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">only</span>(<span class="ruby-identifier">regexps</span>)
+  <span class="ruby-identifier">_reconfigure_silencer</span>(<span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-identifier">regexps</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-pause" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">pause</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Stops invoking callbacks (messages pile up)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="pause-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pause</span>
+  <span class="ruby-identifier">transition</span> <span class="ruby-value">:paused</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-paused" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">paused</span><span
+            class="method-args">()</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>TODO: deprecate</p>
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Listener.html#method-i-paused-3F">paused?</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-paused-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">paused=</span><span
+            class="method-args">(value)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>TODO: deprecate</p>
+          
+          
+
+          
+          <div class="method-source-code" id="paused-3D-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">paused=</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-identifier">transition</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">?</span> <span class="ruby-value">:paused</span> <span class="ruby-operator">:</span> <span class="ruby-value">:processing</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-paused-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">paused?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="paused-3F-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">paused?</span>
+  <span class="ruby-identifier">state</span> <span class="ruby-operator">==</span> <span class="ruby-value">:paused</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Listener.html#method-i-paused">paused</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-processing-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">processing?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>processing means callbacks are called</p>
+          
+          
+
+          
+          <div class="method-source-code" id="processing-3F-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">processing?</span>
+  <span class="ruby-identifier">state</span> <span class="ruby-operator">==</span> <span class="ruby-value">:processing</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Listener.html#method-i-listen-3F">listen?</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-queue" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">queue</span><span
+            class="method-args">(type, change, dir, path, options = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="queue-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">queue</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">change</span>, <span class="ruby-identifier">dir</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">fail</span> <span class="ruby-node">&quot;Invalid type: #{type.inspect}&quot;</span> <span class="ruby-keyword">unless</span> [<span class="ruby-value">:dir</span>, <span class="ruby-value">:file</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">type</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-node">&quot;Invalid change: #{change.inspect}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">change</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+  <span class="ruby-identifier">fail</span> <span class="ruby-node">&quot;Invalid path: #{path.inspect}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+  <span class="ruby-ivar">@queue</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">type</span>, <span class="ruby-identifier">change</span>, <span class="ruby-identifier">dir</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">options</span>]
+
+  <span class="ruby-ivar">@last_queue_event_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_f</span>
+  <span class="ruby-identifier">_wakeup_wait_thread</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">state</span> <span class="ruby-operator">==</span> <span class="ruby-value">:paused</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@tcp_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:broadcaster</span>
+
+  <span class="ruby-identifier">message</span> = <span class="ruby-constant">TCP</span><span class="ruby-operator">::</span><span class="ruby-constant">Message</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">change</span>, <span class="ruby-identifier">dir</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-identifier">registry</span>[<span class="ruby-value">:broadcaster</span>].<span class="ruby-identifier">async</span>.<span class="ruby-identifier">broadcast</span>(<span class="ruby-identifier">message</span>.<span class="ruby-identifier">payload</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-start" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">start</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Starts processing events and starts adapters or resumes invoking callbacks
+if paused</p>
+          
+          
+
+          
+          <div class="method-source-code" id="start-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">start</span>
+  <span class="ruby-identifier">transition</span> <span class="ruby-value">:processing</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Listener.html#method-i-unpause">unpause</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-stop" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">stop</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Stops processing and terminates all actors</p>
+          
+          
+
+          
+          <div class="method-source-code" id="stop-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stop</span>
+  <span class="ruby-identifier">transition</span> <span class="ruby-value">:stopped</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sync" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sync</span><span
+            class="method-args">(type)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="sync-source">
+            <pre><span class="ruby-comment"># File lib/listen/listener.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sync</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-ivar">@registry</span>[<span class="ruby-identifier">type</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-unpause" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">unpause</span><span
+            class="method-args">()</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>TODO: depreciate</p>
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Listener.html#method-i-start">start</a>
+        </div>
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

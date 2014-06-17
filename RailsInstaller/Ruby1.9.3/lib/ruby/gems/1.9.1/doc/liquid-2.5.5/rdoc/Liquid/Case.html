@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Liquid::Case - liquid-2.5.5 Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Block.html">Liquid::Block</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-render">#render</a>
+    
+    <li class="calls-super" ><a href="#method-i-unknown_tag">#unknown_tag</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Liquid::Case">
+  <h1 id="class-Liquid::Case" class="class">
+    class Liquid::Case
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="Syntax">Syntax
+        
+        <dd>
+        
+      
+        <dt id="WhenSyntax">WhenSyntax
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(tag_name, markup, tokens)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              
+            </div>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/liquid/tags/case.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">tag_name</span>, <span class="ruby-identifier">markup</span>, <span class="ruby-identifier">tokens</span>)      
+  <span class="ruby-ivar">@blocks</span> = []
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">markup</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">Syntax</span>
+    <span class="ruby-ivar">@left</span> = <span class="ruby-node">$1</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Syntax Error in tag 'case' - Valid syntax: case [condition]&quot;</span>)
+  <span class="ruby-keyword">end</span>
+        
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-render" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render</span><span
+            class="method-args">(context)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render-source">
+            <pre><span class="ruby-comment"># File lib/liquid/tags/case.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render</span>(<span class="ruby-identifier">context</span>)      
+  <span class="ruby-identifier">context</span>.<span class="ruby-identifier">stack</span> <span class="ruby-keyword">do</span>          
+    <span class="ruby-identifier">execute_else_block</span> = <span class="ruby-keyword">true</span>
+    
+    <span class="ruby-identifier">output</span> = <span class="ruby-string">''</span>
+    <span class="ruby-ivar">@blocks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">block</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">else?</span> 
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">render_all</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">attachment</span>, <span class="ruby-identifier">context</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">execute_else_block</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">evaluate</span>(<span class="ruby-identifier">context</span>)
+        <span class="ruby-identifier">execute_else_block</span> = <span class="ruby-keyword">false</span>        
+        <span class="ruby-identifier">output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">render_all</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">attachment</span>, <span class="ruby-identifier">context</span>)
+      <span class="ruby-keyword">end</span>            
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">end</span>          
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-unknown_tag" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">unknown_tag</span><span
+            class="method-args">(tag, markup, tokens)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="Block.html#method-i-unknown_tag">Liquid::Block#unknown_tag</a>
+            </div>
+          
+
+          
+          <div class="method-source-code" id="unknown_tag-source">
+            <pre><span class="ruby-comment"># File lib/liquid/tags/case.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unknown_tag</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">markup</span>, <span class="ruby-identifier">tokens</span>)
+  <span class="ruby-ivar">@nodelist</span> = []
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">tag</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'when'</span>
+    <span class="ruby-identifier">record_when_condition</span>(<span class="ruby-identifier">markup</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'else'</span>
+    <span class="ruby-identifier">record_else_condition</span>(<span class="ruby-identifier">markup</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
