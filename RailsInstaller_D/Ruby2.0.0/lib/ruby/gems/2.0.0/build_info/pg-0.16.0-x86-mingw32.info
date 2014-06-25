@@ -1,0 +1,2 @@
+--with-pg-include=C:/Sites/railsinstaller-windows/stage/pgsql/include
+--with-pg-lib=C:/Sites/railsinstaller-windows/stage/pgsql/lib

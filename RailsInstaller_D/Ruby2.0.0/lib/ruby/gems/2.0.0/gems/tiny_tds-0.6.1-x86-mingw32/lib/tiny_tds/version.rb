@@ -1,0 +1,3 @@
+module TinyTds
+  VERSION = '0.6.1'
+end

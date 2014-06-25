@@ -1,0 +1,166 @@
+
+* 0.6.1 *
+
+Use both dbsetversion() vs. dbsetlversion. Partially reverts #62.
+
+
+* 0.6.0 *
+
+* Use dbsetversion() vs. dbsetlversion. Fixes #62.
+
+* Remove Ruby 1.8 and 32-bit support.
+
+* Implement misc rb_thread_blocking_region support. Fixes #121. Thanks @lepfhty.
+
+* Test FreeTDS v0.91.89 patch release.
+
+* Fix lost connection handling. Fixes #124. Thanks @krzcho.
+
+* Remove unused variable. Fixes #103. Thanks @jeremyevans.
+
+* Remove need to specify username for Windows Authentication.
+
+* Use proper SQL for returning IDENTITY with Sybase. Fixes #95.
+
+* Compile windows with `--enable-sspi`.
+
+* Allow MiniPortile to build any FreeTDS version we need. Fixes #76.
+
+* Always convert password option to string. Fixes #92.
+
+* Move test system to real MiniTest::Spec. All tests pass on Azure too.
+
+* Raise and handle encoding errors on DB writes. Fixes #89.
+
+
+* 0.5.1 *
+
+* Change how we configure with iconv, basically it is always needed. Fixes #11 & #69.
+
+
+* 0.5.0 *
+
+* Copy mysql2s handling of Time and Datetime so 64bit systems are leveraged. Fixes #46 and #47. Thanks @lsylvester!
+
+* Add CFLAGS='-fPIC' for libtool. Fix TDS version configs in our ports file. Document. Fixes #45
+
+* Update our TDS version constants to reflect changed 8.0/9.0 to 7.1/7.2 DBLIB versions in FreeTDS 
+  while making it backward compatible, again like FreeTDS. Even tho you can not configure FreeTDS with
+  TDS version 7.2 or technically even use it, I added tests to prove that we correctly handle both
+  varchar(max) and nvarchar(max) with large amounts of data.
+
+* FreeTDS 0.91 has been released. Update our port scripts.
+
+* Add test for 0.91 and higher to handle incorrect syntax in sp_executesql.
+
+* Returning empty result sets with a command batch that has multiple statements is now the default. Use :empty_sets => false to override.
+
+* Do not raise a TinyTds::Error with our message handler unless the severity is greater than 10.
+
+
+* 0.4.5 *
+
+* Includes precompiled Windows binaries for FreeTDS 0.91rc2 & LibIconv. No precompiled OpenSSL yet for Windows to SQL Azure.
+
+* Fixed symbolized unicode column names.
+
+* Use same bigint ruby functions to return identity. Hopefully fixes #19.
+
+* Release static libs for Windows.
+
+* Change how :host/:port are implemented. Now sending "host:port" to :dataserver.
+
+
+* 0.4.4 *
+
+* New :host/:port connection options. Removes need for freetds.conf file.
+
+
+* 0.4.3 *
+
+* New Client#active? method to check for good connection. Always use this abstract method.
+
+* Better SYBEWRIT "Write to SQL Server failed." error handling. New Client#dead? check.
+
+* Azure tested using latest FreeTDS with submitted patch. https://gist.github.com/889190
+
+
+* 0.4.2 *
+
+* Iconv is a dep only when compiling locally. However, left in the ability to configure 
+  it for native gem installation but you must use
+  --enable-iconv before using --with-iconv-dir=/some/dir
+
+* Really fix what 0.4.1 was supposed to do, force SYBDBLIB compile.
+
+
+* 0.4.1 *
+
+* Undefine MSDBLIB in case others have explicitly compiled FreeTDS with "MS db-lib source compatibility: yes".
+
+
+* 0.4.0 *
+
+* Allow SYBEICONVI errors to pass thru so that bad data is converted to ? marks.
+
+* Build native deps using MiniPortile [Luis Lavena]
+
+* Allow Result#fields to be called before iterating over the results.
+
+* Two new client helper methods, #sqlsent? and #canceled?. Possible to use these to determine current 
+  state of the client and the need to use Result#cancel to stop processing active results. It is also 
+  safe to call Result#cancel over and over again.
+
+* Look for the syb headers only.
+
+
+* 0.3.2 *
+
+* Small changes while testing JRuby. Using options hash for connect vs many args.
+
+
+* 0.3.1 *
+
+* Fix bad gem build.
+
+
+* 0.3.0 *
+
+* Access stored procedure return codes.
+
+* Make sure dead or not enabled connections are handled.
+
+* Fix bad client after timeout & read from server errors.
+
+
+* 0.2.3 *
+
+*  Do not use development ruby/version, but simple memoize an eval check on init to find out, for 1.8.6 reflection.
+
+
+* 0.2.2 *
+
+* Fixed failing test in Ruby 1.8.6. DateTime doesn't support fractional seconds greater than 59. 
+  See: http://redmine.ruby-lang.org/issues/show/1490 [Erik Bryn]
+
+
+* 0.2.1 *
+
+* Compatibility with 32-bit systems. Better cross language testing. [Klaus Gundermann]
+
+
+* 0.2.0 *
+
+* Convert GUID's in a more compatible way. [Klaus Gundermann]
+
+* Handle multiple result sets in command buffer or stored procs. [Ken Collins]
+
+* Fixed some compiler warnings. [Erik Bryn]
+
+* Avoid segfault related to smalldatetime conversion. [Erik Bryn]
+
+* Properly encode column names in 1.9. [Erik Bryn]
+
+
+* 0.1.0 Initial release!
+
