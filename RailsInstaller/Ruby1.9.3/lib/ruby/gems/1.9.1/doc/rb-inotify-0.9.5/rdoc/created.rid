@@ -1,8 +1,0 @@
-Fri, 13 Jun 2014 21:03:22 -0400
-lib/rb-inotify.rb	Fri, 13 Jun 2014 20:37:04 -0400
-lib/rb-inotify/event.rb	Fri, 13 Jun 2014 20:37:04 -0400
-lib/rb-inotify/native.rb	Fri, 13 Jun 2014 20:37:04 -0400
-lib/rb-inotify/native/flags.rb	Fri, 13 Jun 2014 20:37:04 -0400
-lib/rb-inotify/notifier.rb	Fri, 13 Jun 2014 20:37:06 -0400
-lib/rb-inotify/watcher.rb	Fri, 13 Jun 2014 20:37:06 -0400
-README.md	Fri, 13 Jun 2014 20:37:04 -0400
