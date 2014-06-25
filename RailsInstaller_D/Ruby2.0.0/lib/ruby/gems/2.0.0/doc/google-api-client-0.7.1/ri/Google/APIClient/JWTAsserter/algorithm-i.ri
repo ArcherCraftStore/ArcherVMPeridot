@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"algorithm:ETI"-Google::APIClient::JWTAsserter#algorithm;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"0@return [String] Algorithm used for signing;T:
+@fileI"/lib/google/api_client/auth/jwt_asserter.rb;T:0@omit_headings_from_table_of_contents_below0F@I"#Google::APIClient::JWTAsserter;FcRDoc::NormalClass0

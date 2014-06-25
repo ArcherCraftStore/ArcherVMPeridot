@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"call_id:ETI"3Google::APIClient::BatchedCallResponse#call_id;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"&@return [String] UUID of the call;T:
+@fileI"#lib/google/api_client/batch.rb;T:0@omit_headings_from_table_of_contents_below0F@I"+Google::APIClient::BatchedCallResponse;FcRDoc::NormalClass0

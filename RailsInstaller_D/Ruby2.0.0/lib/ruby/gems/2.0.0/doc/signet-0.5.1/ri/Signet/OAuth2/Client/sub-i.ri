@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"sub:ETI"Signet::OAuth2::Client#sub;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"/The target "sub" when issuing assertions. ;TI"!Used in some Admin SDK APIs.;T:
+@fileI"!lib/signet/oauth_2/client.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Signet::OAuth2::Client;FcRDoc::NormalClass0

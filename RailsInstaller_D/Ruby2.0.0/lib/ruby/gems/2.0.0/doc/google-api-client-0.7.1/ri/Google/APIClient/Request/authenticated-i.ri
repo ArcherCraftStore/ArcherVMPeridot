@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"authenticated:ETI"-Google::APIClient::Request#authenticated;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"N@return [TrueClass,FalseClass] True if request should include credentials;T:
+@fileI"%lib/google/api_client/request.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Google::APIClient::Request;FcRDoc::NormalClass0
