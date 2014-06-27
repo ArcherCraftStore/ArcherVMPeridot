@@ -1,0 +1,54 @@
+
+
+.mapsian-text-center {text-align:center !important; overflow:visible !important;}
+.mapsian-text-setup {overflow:visible !important;}
+.mapsian-icon-setup {width:20px; height:auto; cursor:pointer; cursor:hand;}
+.mapsian-icon-dropdown {width:14px; height:auto; position:relative; margin-right:10px; top:2px;}
+.mapsian-icon-preview {width:26px; height:auto; position:relative; margin-right:10px; top:0px; cursor:pointer; cursor:hand;}
+.mapsian-icon-status {width:50px; height:auto; position:relative; top:2px; cursor:pointer; cursor:hand;}
+.mapsian_setup_dropdown {position:relative;height:auto; width:100%; top:-1px;}
+.mapsian_setup_dropdown > .dropdown-menu {display:none; min-width:100px; position:absolute; top:22px; padding:5px 15px; background:#fff; z-index:9999; border-radius:5px; border:1px solid #cecece; box-shadow:0 6px 12px rgba(0,0,0,.175);}
+.mapsian_setup_dropdown > .dropdown-menu > li {cursor:pointer; cursor:hand;}
+.mapsian_setup_dropdown > .dropdown-menu > li:hover {background:#cecece;}
+.mapsian-open {display:block !important;}
+
+.mapsian_location_linkurl {width:80%;}
+#full_address {width:70%;}
+
+.rename_title {display:none;}
+
+.mapsian-meta-add-group-div {min-height:34px;}
+.mapsian-meta-add-group > li {float:left; margin-right:10px;}
+.mapsian-meta-added-group {width:100%; padding:10px 10px 30px 10px; border:2px dotted #cecece; border-radius:10px; cursor:move;}
+.mapsian-meta-added-group-title {float:left; margin:0; padding:0px 0px 0px 10px; font-weight:bold; color:#ff7200; }
+.mapsian-meta-added-group-remove {float:right; margin:0; padding:0;}
+.mapsian-meta-added-group-count-location {float:right; position:relative; right:30px;}
+.mapsian_location_description {width:100%; height:100px;}
+
+.group_not_added {background:#cecece;}
+.mapsian_modal {width:100%; height:100%; position:absolute; top:0px;}
+.mapsian_modal_background {width:100%; height:100%; position:absolute; top:0px; z-index:9998; background:black; opacity:0.6}
+.mapsian_modal_location_preview {width:500px; height:400px; margin:0 auto; padding:10px 10px; background:#fff; position:relative; z-index:9999; top:100px;}
+.mapsian_modal_close {position:absolute; top:-60px; right:-20px; padding:10px 10px; cursor:pointer; cursor:hand;}
+.mapsian_modal_close_btn {width:50px; height:auto;}
+
+#sep_groups_layout > ul > li {float:left;}
+#sep_groups_layout > ul > .add_new_group {min-width:300px; max-width:30%; margin-right:20px;}
+#sep_groups_layout > ul > .added_group_list {max-width:100%; height:auto;}
+#sep_groups_layout > ul > .added_group_list > ul > li{float:left;}
+#sep_groups_layout > ul > .added_group_list > ul > .title_group_name {width:300px;}
+.added_location_bullet {min-width:38px; padding:2px 5px 2px 5px; background:#da2128; border-radius:15px; position:relative; top:-2px; text-align:center; color:#fff; font-family:verdana; font-size:10px; font-weight:bold}
+.added_location_bullet > a {color:#fff; text-decoration:none;}
+
+.group_name_newone {display:none; position:relative; top:-5px;}
+.group_slug_newone {display:none; position:relative; top:-5px;}
+
+.mapsize_pannel {height:70px;}
+.mapsize_pannel > ul {clear:both;}
+.mapsize_pannel > ul > li {float:left;}
+.mapsize_pannel_title {width:50px; position:relative; top:5px;}
+.ui-setting {height:30px; margin-top:10px;}
+.ui-setting > ul > li {float:left;}
+
+#the-list > tr > .column-preview {width:100%; text-align:left;}
+#the-list > tr > .column-preview > img {margin-left:30px;}

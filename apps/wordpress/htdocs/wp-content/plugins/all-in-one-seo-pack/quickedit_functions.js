@@ -1,5 +1,6 @@
-function aioseop_ajax_edit_meta_form( post_id, post_title, meta ) {
+function aioseop_ajax_edit_meta_form( post_id, meta ) {
 	var uform = jQuery('#aioseop_'+meta+'_' + post_id);
+	var post_title = jQuery('#aioseop_label_' + meta + '_' + post_id).text();
 	var element = uform.html(); var input;
 	input = '<textarea id="aioseop_new_'+meta+'_' + post_id + '" style="font-size:10px;width:65%;float:left" rows=2 cols=16>'  + post_title + '</textarea>';
 	input += '<label style="float:left">';

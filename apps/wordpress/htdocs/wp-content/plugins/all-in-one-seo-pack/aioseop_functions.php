@@ -190,17 +190,26 @@ if ( !function_exists( 'aioseop_ajax_save_meta' ) ) {
 		else
 			check_ajax_referer( 'screen-options-nonce', 'screenoptionnonce' );
 		$post_id = intval( $_POST['post_id'] );
-		$new_meta = $_POST['new_meta'];
+		$new_meta = strip_tags( $_POST['new_meta'] );
 		$target = $_POST['target_meta'];
-		update_post_meta( $post_id, '_aioseop_' . $target, esc_attr( $new_meta ) );
-		$result = get_post_meta( $post_id, '_aioseop_' . $target, true );
-		if( $result != '' ): $label = $result;  
-		else: $label = ''; $result = '<strong><i>' . __( 'No', 'all_in_one_seo_pack' ) . ' ' . $target . '</i></strong>' ; endif;
-		$output = $result . '<a id="' . $target . 'editlink' . $post_id . '" href="javascript:void(0);"'; 
-		$output .= 'onclick=\'aioseop_ajax_edit_meta_form(' . $post_id . ', ' . json_encode( $label ) . ', "' . $target . '");return false;\' title="' . __('Edit') . '">';
+		$result = '';
+		if ( in_array( $target, Array( 'title', 'description', 'keywords' ) ) && current_user_can( 'edit_post', $post_id ) ) {
+			update_post_meta( $post_id, '_aioseop_' . $target, esc_attr( $new_meta ) );
+			$result = get_post_meta( $post_id, '_aioseop_' . $target, true );
+		} else {
+			die();
+		}
+		if( $result != '' ): 
+			$label = "<label id='aioseop_label_{$target}_{$post_id}'>" . $result . '</label>';  
+		else: 
+			$label = '';
+			$label = "<label id='aioseop_label_{$target}_{$post_id}'></label><strong><i>" . __( 'No', 'all_in_one_seo_pack' ) . ' ' . $target . '</i></strong>';
+		endif;
+		$output = $label . '<a id="' . $target . 'editlink' . $post_id . '" href="javascript:void(0);"'; 
+		$output .= 'onclick=\'aioseop_ajax_edit_meta_form(' . $post_id . ', "' . $target . '");return false;\' title="' . __('Edit') . '">';
 		$output .= '<img class="aioseop_edit_button" id="aioseop_edit_id" src="' . AIOSEOP_PLUGIN_IMAGES_URL . '/cog_edit.png" /></a>';
-		die( "jQuery('div#aioseop_" . $target . "_" . $post_id . "').fadeOut('fast', function() {
-			  jQuery('div#aioseop_" . $target . "_" . $post_id . "').html('" . addslashes_gpc($output) . "').fadeIn('fast');
+		die( "jQuery('div#aioseop_" . $target . "_" . $post_id . "').fadeOut('fast', function() { var my_label = " . json_encode( $output ) . ";
+			  jQuery('div#aioseop_" . $target . "_" . $post_id . "').html(my_label).fadeIn('fast');
 		});" );
 	}
 }
@@ -454,11 +463,14 @@ if ( !function_exists( 'aioseop_mrt_pccolumn' ) ) {
 				<div 	class="aioseop_mpc_admin_meta_options" 
 						id="aioseop_<?php print $target; ?>_<?php echo $id; ?>" 
 						style="float:left;">
-					<?php $content = htmlspecialchars( stripslashes( get_post_meta( $id, "_aioseop_" . $target,	TRUE ) ) ); 
-				if( !empty($content) ): $label = esc_js( $content );  
-				else: $label = ''; $content = '<strong><i>No ' . $target . '</i></strong>' ; endif;
-					print $content . '<a id="' . $target . 'editlink' . $id . '" href="javascript:void(0);" onclick=\'aioseop_ajax_edit_meta_form(' .
-					$id . ', "' . str_replace( Array( '"', '&quot;' ), Array( '\x22', '\x22' ), esc_js( $label ) ) . '", "' . $target . '");return false;\' title="' . __('Edit') . '">';
+					<?php $content = strip_tags( stripslashes( get_post_meta( $id, "_aioseop_" . $target,	TRUE ) ) ); 
+				if( !empty($content) ): 
+					$label = "<label id='aioseop_label_{$target}_{$id}'>" . $content . '</label>';  
+				else: 
+					$label = "<label id='aioseop_label_{$target}_{$id}'></label><strong><i>No " . $target . '</i></strong>';
+				endif;
+					print $label . '<a id="' . $target . 'editlink' . $id . '" href="javascript:void(0);" onclick=\'aioseop_ajax_edit_meta_form(' .
+					$id . ', "' . $target . '");return false;\' title="' . __('Edit') . '">';
 						print "<img class='aioseop_edit_button' 
 											id='aioseop_edit_id' 
 											src='" . AIOSEOP_PLUGIN_IMAGES_URL . "cog_edit.png' /></a>";
@@ -567,10 +579,34 @@ if ( !function_exists( 'aioseop_filter_callback' ) ) {
 
 if ( !function_exists( 'aioseop_add_contactmethods' ) ) {
 	function aioseop_add_contactmethods( $contactmethods ) {
-		global $aioseop_options;
+		global $aioseop_options, $aioseop_modules;
 		if ( empty( $aioseop_options['aiosp_google_disable_profile'] ) )
 			$contactmethods['googleplus'] = __( 'Google+', 'all_in_one_seo_pack' );
+		if ( !empty( $aioseop_modules ) && is_object( $aioseop_modules ) ) {
+			$m = $aioseop_modules->return_module( 'All_in_One_SEO_Pack_Opengraph' );
+			if ( ( $m !== false ) && is_object( $m ) && $m->option_isset( 'twitter_creator' ) ) {
+				$contactmethods['twitter'] = __( 'Twitter', 'all_in_one_seo_pack' );
+			}
+		}
 		return $contactmethods;
+	}
+}
+
+/***
+ * Utility function for inserting elements into associative arrays by key
+ */
+if ( !function_exists( 'aioseop_array_insert_after' ) ) {
+	function aioseop_array_insert_after( $arr, $insertKey, $newValues ) {
+	        $keys = array_keys($arr);
+	        $vals = array_values($arr);
+	        $insertAfter = array_search($insertKey, $keys) + 1;
+	        $keys2 = array_splice($keys, $insertAfter);
+	        $vals2 = array_splice($vals, $insertAfter);
+	        foreach( $newValues as $k => $v ) {
+	                $keys[] = $k;
+	                $vals[] = $v;
+	        }
+	        return array_merge(array_combine($keys, $vals), array_combine($keys2, $vals2));
 	}
 }
 

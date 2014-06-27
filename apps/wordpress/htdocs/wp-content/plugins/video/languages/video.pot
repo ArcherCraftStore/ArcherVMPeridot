@@ -1,0 +1,127 @@
+# Copyright (C) 2010 VideoPress
+# This file is distributed under the same license as the VideoPress package.
+msgid ""
+msgstr ""
+"Project-Id-Version: VideoPress 1.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/video\n"
+"POT-Creation-Date: 2011-08-23 02:35:42+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: settings.php:18
+msgid "VideoPress player"
+msgstr ""
+
+#: settings.php:19
+msgctxt "Free as in Freedom and open source"
+msgid "Free formats"
+msgstr ""
+
+#: settings.php:39
+msgid ""
+"Only display video in formats free of patent claims and other restrictions "
+"on distribution and playback."
+msgstr ""
+
+#: settings.php:43
+msgctxt "Free as in Freedom and open source"
+msgid "Only display videos in free software formats"
+msgstr ""
+
+#: settings.php:44
+msgid "Ogg file container with Theora video and Vorbis audio"
+msgstr ""
+
+#: video.php:107
+msgid "%s PHP library not installed."
+msgstr ""
+
+#: video.php:108
+msgid ""
+"VideoPress plugin will not function without <a href=\"%s\">PHP JSON "
+"functions</a> enabled. Please update your version of WordPress for improved "
+"compatibility and/or enable native JSON support for PHP."
+msgstr ""
+
+#: video.php:634
+msgid ""
+"The VideoPress plugin could not communicate with the VideoPress servers. "
+"This error is most likely caused by a misconfigured plugin. Please reinstall "
+"or upgrade."
+msgstr ""
+
+#: video.php:636
+msgid "<strong>%s</strong> is not an allowed embed site."
+msgstr ""
+
+#: video.php:636
+msgid "Publisher limits playback of video embeds."
+msgstr ""
+
+#: video.php:638
+msgid "No data found for VideoPress identifier: <strong>%s</strong>."
+msgstr ""
+
+#: video.php:853
+msgid "%s Error"
+msgstr ""
+
+#: video.php:887
+msgid "This video is intended for mature audiences."
+msgstr ""
+
+#: video.php:887
+msgid "Please verify your birthday."
+msgstr ""
+
+#: video.php:939
+msgid "Submit"
+msgstr ""
+
+#: video.php:942
+msgid "More information"
+msgstr ""
+
+#: video.php:985
+msgid ""
+"You do not have sufficient <a rel=\"nofollow\" href=\"%s\">freedom levels</"
+"a> to view this video. Support free software and upgrade."
+msgstr ""
+
+#: video.php:1043
+msgctxt "watch a video title"
+msgid "Watch: %s"
+msgstr ""
+
+#: video.php:1142 video.php:1164
+msgid "this video"
+msgstr ""
+
+#: video.php:1171
+msgctxt "Play as in playback or view a movie"
+msgid "JavaScript required to play %s."
+msgstr ""
+
+#: video.php:1318
+msgid ""
+"This video requires <a rel=\"nofollow\" href=\"%s\">Adobe Flash</a> for "
+"playback."
+msgstr ""
+
+#: video.php:1325
+msgid "Loading video..."
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Upload new videos to <a href=\"http://videopress.com/\">VideoPress</a>, edit "
+"metadata, and easily insert VideoPress videos into posts and pages using "
+"shortcodes. Requires a <a href=\"http://wordpress.com/\">WordPress.com</a> "
+"account and a WordPress.com blog with the <a href=\"http://en.wordpress.com/"
+"products/#videopress\">VideoPress upgrade</a> to store and serve uploaded "
+"videos."
+msgstr ""

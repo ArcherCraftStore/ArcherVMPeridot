@@ -12,7 +12,11 @@ function toggleVisibility(id) {
 }
 
 function countChars(field,cntfield) {
-	cntfield.value = field.value.length;
+	var extra = 0;
+	if ( ( field.name == 'aiosp_title' ) && ( typeof aiosp_title_extra !== 'undefined' ) ) {
+		extra = aiosp_title_extra;
+	}
+	cntfield.value = field.value.length + extra;
 }
 
 function aioseop_get_field_value( field ) {
