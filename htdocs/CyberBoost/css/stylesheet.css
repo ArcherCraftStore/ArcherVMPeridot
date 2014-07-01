@@ -1,0 +1,32 @@
+div {
+border-radius: 12px;
+
+}
+div.header{
+background-color: #11FA24;
+height: 75px;
+font-family: Segoe UI;
+}
+h1.title{
+text-align: center;
+}
+div.sidebar{
+float: left;
+background-color: blue;
+width: 150px;
+height: 400px;
+}
+div.content{
+float: right;
+background-color: red;
+width: 853px;
+height: 346px;
+margin-top: -400px;
+margin-right: -9px;
+}
+div.footer{
+background-color:  #11FA24;
+height: 75px;
+margin-bottom: 400px;
+
+}

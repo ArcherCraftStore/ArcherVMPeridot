@@ -17,12 +17,90 @@ $(function(){
 });
 
 </script>
+<style type="text/css">
+  html, body { margin: 0; padding: 0; }
+  .hide { display: none;}
+  .show { display: block;}
+  </style>
+ <script type="text/javascript">
+  /**
+   * Global variables to hold the profile and email data.
+   */
+   var profile, email;
+
+  /*
+   * Triggered when the user accepts the sign in, cancels, or closes the
+   * authorization dialog.
+   */
+  function loginFinishedCallback(authResult) {
+    if (authResult) {
+      if (authResult['error'] == undefined){
+        toggleElement('signin-button'); // Hide the sign-in button after successfully signing in the user.
+        gapi.client.load('plus','v1', loadProfile);  // Trigger request to get the email address.
+      } else {
+        console.log('An error occurred');
+      }
+    } else {
+      console.log('Empty authResult');  // Something went wrong
+    }
+  }
+
+  /**
+   * Uses the JavaScript API to request the user's profile, which includes
+   * their basic information. When the plus.profile.emails.read scope is
+   * requested, the response will also include the user's primary email address
+   * and any other email addresses that the user made public.
+   */
+  function loadProfile(){
+    var request = gapi.client.plus.people.get( {'userId' : 'me'} );
+    request.execute(loadProfileCallback);
+  }
+
+  /**
+   * Callback for the asynchronous request to the people.get method. The profile
+   * and email are set to global variables. Triggers the user's basic profile
+   * to display when called.
+   */
+  function loadProfileCallback(obj) {
+    profile = obj;
+
+    // Filter the emails object to find the user's primary account, which might
+    // not always be the first in the array. The filter() method supports IE9+.
+    email = obj['emails'].filter(function(v) {
+        return v.type === 'account'; // Filter out the primary email
+    })[0].value; // get the email from the filtered results, should always be defined.
+    displayProfile(profile);
+  }
+
+  /**
+   * Display the user's basic profile information from the profile object.
+   */
+  function displayProfile(profile){
+    document.getElementById('name').innerHTML = profile['displayName'];
+    document.getElementById('pic').innerHTML = '<img src="' + profile['image']['url'] + '" />';
+    document.getElementById('email').innerHTML = email;
+    toggleElement('profile');
+  }
+
+  /**
+   * Utility function to show or hide elements by their IDs.
+   */
+  function toggleElement(id) {
+    var el = document.getElementById(id);
+    if (el.getAttribute('class') == 'hide') {
+      el.setAttribute('class', 'show');
+    } else {
+      el.setAttribute('class', 'hide');
+    }
+  }
+  </script>
+  <script src="https://apis.google.com/js/client:plusone.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="container">
 
 		<?php
-
+$api_enabled = true;
  // Connects to your Database
 
  mysql_connect("localhost", "acoadmin", "aco1234$") or die(mysql_error());
@@ -84,9 +162,11 @@ echo "</div>";
  //if the cookie does not exist, they are taken to the login screen
 
  {
-
+if($api_enabled == true ){
+  
+}else{
  header("Location: login.php");
-
+}
  }
 
  ?>
@@ -106,10 +186,18 @@ echo "</div>";
 						<p class="sub-heading">Welcome to the New Windows 8 UI</p>
 					</div>
 					<div class="module orange double img bing">
-						<p class="title">Search</p>
+						<p class="title">Google+</p>
 						<form>
-							<input type="text" placeholder="Search bing...">
-							<input type="button" class="submit" value="submit">
+							<span id="signinButton">
+  <span
+    class="g-signin"
+    data-callback="loginFinishedCallback"
+    data-clientid="422061338001-ge4m1nqm6rv8isdp70ln2gcbr60gpfa4.apps.googleusercontent.com"
+    data-cookiepolicy="single_host_origin"
+    data-requestvisibleactions="http://schemas.google.com/AddActivity"
+    data-scope="https://www.googleapis.com/auth/plus.login">
+  </span>
+</span>
 						</form>
 					</div>
 					<div class="module yellow double img not">
@@ -145,8 +233,9 @@ echo "</div>";
 						<p class="title">Xbox</p>
 					</div>
 					<a href="http://localhost:80/drupal"><div class="module blue double img twitter">
-						<p class="title">Drupal</p>
+						<p class="title">Google+</p>
 						<p class="sub-heading"><i>"I Just got a nice Drupal App! #Drupal #ArcherDrupal"</i></p>
+						>
 					</div>
 					</a>
 					<div class="module green double img excel">
@@ -155,6 +244,7 @@ echo "</div>";
 					</div>
 					<div class="module blue single img net">
 						<p class="title">Internet</p>
+						
 					</div>
 				</li>
 
@@ -224,7 +314,7 @@ echo "</div>";
 					</div>
 					<div class="module pink single img twitter">
 						<p class="title">Social</p>
-					</div>
+						</div>
 					<div class="module blue single img xbox">
 						<p class="title">Games</p>
 					</div>
@@ -245,7 +335,14 @@ echo "</div>";
 			<button data-dir="prev" id="back"><</button>
 			<button data-dir="next" id="forw">></button>
 		</div>
+<div id="profile" class="hide">
+    <div>
+      <span id="pic"></span>
+      <span id="name"></span>
+    </div>
 
+    <div id="email"></div>
+  </div>
 	</div>
 	 
 					</body>

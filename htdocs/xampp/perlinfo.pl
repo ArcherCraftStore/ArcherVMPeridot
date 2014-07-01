@@ -1,4 +1,4 @@
-#!"D:\xampp\perl\bin\perl.exe"
+#!"E:\xampp\perl\bin\perl.exe"
 
 use HTML::Perlinfo;
 use CGI qw(header);

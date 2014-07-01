@@ -148,8 +148,35 @@
  // if they are not logged in
 
  ?>
+ <script>
+ function signinCallback(authResult) {
+  if (authResult['status']['signed_in']) {
+    // Update the app to reflect a signed in user
+    // Hide the sign-in button now that the user is authorized, for example:
+    document.getElementById('signinButton').setAttribute('style', 'display: none');
+  } else {
+    // Update the app to reflect a signed out user
+    // Possible error values:
+    //   "user_signed_out" - User is signed-out
+    //   "access_denied" - User denied access to your app
+    //   "immediate_failed" - Could not automatically log in the user
+    console.log('Sign-in state: ' + authResult['error']);
+  }
+}
+</script>
 <form id="login" class="front box" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
   <div class="default"><i class="icon-briefcase"></i><h1>Press login</h1></div>
+  <span id="signinButton">
+  <span
+    class="g-signin"
+    data-callback="signinCallback"
+    data-clientid="422061338001-fq07c919csupifnhacf73egoobbcnrlv.apps.googleusercontent.com
+"
+    data-cookiepolicy="https://localhost:443/"
+    data-requestvisibleactions="http://schemas.google.com/AddActivity"
+    data-scope="https://www.googleapis.com/auth/plus.login">
+  </span>
+</span>
 <input type="text" placeholder="username" name="username"/>
 <input type="password" placeholder="password" name="pass"/>
 <input type="submit" name="submit"class="login"><i class="icon-ok"></i></button>
@@ -166,6 +193,13 @@
 <button class="logout"><i class="icon-off"></i></button>
 </div>
 </div>
+   <script type="text/javascript">
+      (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/client:plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     })();
+    </script>
 <?php
 
  }
