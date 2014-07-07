@@ -4,5 +4,3 @@ AuthUserFile E:/ArcherVMPeridot/htdocs/.htpasswd
 AuthGroupFile E:/ArcherVMPeridot/htdocs/groups
 Require group archercrafters
 Header add X-ArcherCraft-InetOS "ArcherVMPEridot"
-ErrorDocument 404 http://localhost:80/404.html
-ErrorDocument 403 http://localhost:80/403.htm
