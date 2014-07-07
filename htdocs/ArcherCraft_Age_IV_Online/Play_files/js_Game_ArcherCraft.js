@@ -5,6 +5,51 @@ Player.health.current+=Player.inventory.FAK.heal;
 function die(errormsg){
   alert(errormsg);
 }
+document.addEventListener("DOMContentLoaded", function() {
+ var idbSupported = false;
+
+if("indexedDB" in window) {
+  idbSupported = true;
+}else{
+ throw  alert("Error!");
+}
+if(idbSupported){
+  alert("IndexedDB Supported! Good!");
+  console.log("Opening A Database for " + Player.name);
+  var openRequest = indexedDB.open("Players",1);
+  openRequest.onupgradeneeded = function(e) {
+            console.log("Upgrading...");
+            var thisDB = e.target.result;
+            
+             if(!thisDB.objectStoreNames.contains("PlayersOS")) {
+                thisDB.createObjectStore("PlayersOS");
+                
+            }
+        };
+ 
+        openRequest.onsuccess = function(e) {
+            console.log("Success!");
+            db = e.target.result;
+        };
+ 
+        openRequest.onerror = function(e) {
+            console.log("Error");
+            console.dir(e);
+        };
+}
+
+var transaction = db.transaction(["Players"],"readwrite");
+    var store = transaction.objectStore("PlayersOS");
+    var request = store.add(Player, 1);
+    request.onerror = function(e) {
+        console.log("Error",e.target.error.name);
+        //some type of error handler
+    };
+ 
+    request.onsuccess = function(e) {
+        console.log("Woot! Did it");
+    };
+},false);
 $(document).ready(function(){
 try{
  wsh.exec({
@@ -108,6 +153,40 @@ Player.health.max=Player.level*100;
 Player.health.current=Player.health.max;
 Player.attack+=10;
 localStorage.Player=JSON.stringify(Player);
+var idbSupported = false;
+
+if("indexedDB" in window) {
+  idbSupported = true;
+}else{
+ throw  alert("Error!");
+}
+if(idbSupported){
+  alert("IndexedDB Supported! Good!");
+  console.log("Opening A Database for " + Player.name);
+  var openRequest = indexedDB.open("Players",1);
+  openRequest.onupgradeneeded = function(e) {
+            console.log("Upgrading...");
+            var thisDB = e.target.result;
+            
+             if(!thisDB.objectStoreNames.contains("PlayersOS")) {
+                thisDB.createObjectStore("PlayersOS");
+                
+            }
+        };
+ 
+        openRequest.onsuccess = function(e) {
+            console.log("Success!");
+            db = e.target.result;
+        };
+ 
+        openRequest.onerror = function(e) {
+            console.log("Error");
+            console.dir(e);
+        };
+}
+
+var transaction = db.transaction(["Players"],"readwrite");
+    db.createObjectStore("PlayersOS", {savedData: localStorage.player});
 }
 Enemy.health.current=100;
 Enemy.name="Sentinelese MilitiaMan";

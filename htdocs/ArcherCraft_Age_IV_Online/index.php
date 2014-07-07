@@ -11,6 +11,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="htjsdocs/jquery-mobile-theme-062536-0/themes/my-custom-theme.css" />
+  <link rel="stylesheet" href="htjsdocs/jquery-mobile-theme-062536-0/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
 <script type="text/javascript" src="script.js"></script>
 <link href="_styles/css/stylesheet.css" rel="stylesheet" type="text/css"/>
 <?php
